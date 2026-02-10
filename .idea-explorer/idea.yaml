@@ -1,0 +1,27 @@
+idea:
+  title: Fixing Lazy LLMs
+  domain: nlp
+  hypothesis: 'Large language models (LLMs) tend to prefer easy or less effortful
+    responses because they lack subjective judgment of good or bad; prompting LLMs
+    to act as harsher critics and controlling the response budget may improve their
+    output quality.
+
+    '
+  background:
+    description: 'Colloquially, I have heard complaints that LLMs are lazy. They kind
+      of prefer to take the easy way out without trying very hard. It is also hypothesized
+      that being rude to LLMs leads to better results.
+
+      I think the main reason for this is that LLMs do not have subjective judgement
+      of good or bad. A simple approach would be to ask it to be a harsher and harsher
+      critic and control the budget.
+
+      Does this approach work? Are there other approaches?'
+  metadata:
+    source: IdeaHub
+    source_url: https://hypogenic.ai/ideahub/idea/805S0BXoPaE59KD1qnHh
+    idea_id: fixing_lazy_llms_20260210_201237_ad7e77cb
+    created_at: '2026-02-10T20:12:37.619383'
+    status: submitted
+    github_repo_name: fix-lazy-llms-f21e-claude
+    github_repo_url: https://github.com/Hypogenic-AI/fix-lazy-llms-f21e-claude
