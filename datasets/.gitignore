@@ -1,0 +1,7 @@
+# Ignore large dataset files
+*.tar
+*.tar.gz
+*.zip
+# But track metadata
+!README.md
+!.gitignore

@@ -1,0 +1,94 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cobbe et~al.(2021)Cobbe, Kosaraju, Bavarian, Chen, Jun, Kaiser,
+  Plappert, Tworek, Hilton, Nakano, Hesse, and Schulman]{cobbe2021training}
+Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz
+  Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano,
+  Christopher Hesse, and John Schulman.
+\newblock Training verifiers to solve math word problems.
+\newblock \emph{arXiv preprint arXiv:2110.14168}, 2021.
+
+\bibitem[Han et~al.(2024)Han, Ge, Fu, Jia, Shi, Zhang, Shi, Wang, Xiong, and
+  Li]{han2024token}
+Tingxu Han, Chunrong Ge, Yuanyuan Fu, Jiawei Jia, Wenqiang Shi, Yiping Zhang,
+  Jian Shi, Deyao Wang, Hai Xiong, and Zheng Li.
+\newblock Token-budget-aware {LLM} reasoning.
+\newblock \emph{arXiv preprint arXiv:2412.18547}, 2024.
+
+\bibitem[Huang et~al.(2024)Huang, Chen, Mishra, Zheng, Yu, Song, and
+  Zhou]{huang2024large}
+Jie Huang, Xinyun Chen, Swaroop Mishra, Huaixiu~Steven Zheng, Adams~Wei Yu,
+  Xinying Song, and Denny Zhou.
+\newblock Large language models cannot self-correct reasoning yet.
+\newblock \emph{arXiv preprint arXiv:2310.01798}, 2024.
+
+\bibitem[Kamoi et~al.(2024)Kamoi, Sharma, Bhat, Quan, Ding, Nan, Caragea, and
+  Roth]{kamoi2024when}
+Ryo Kamoi, Yusen Sharma, Sarkar Snigdha~Sarathi Bhat, Yuqing Quan, Nuo Ding,
+  Yixin Nan, Cornelia Caragea, and Dan Roth.
+\newblock When can {LLMs} actually correct their own mistakes? a critical
+  survey of self-correction of {LLMs}.
+\newblock \emph{arXiv preprint arXiv:2406.01297}, 2024.
+
+\bibitem[Madaan et~al.(2023)Madaan, Tandon, Gupta, Hallinan, Gao, Wiegreffe,
+  Alon, Dziri, Prabhumoye, Yang, Gupta, Majumder, Hermann, Welleck,
+  Yazdanbakhsh, and Clark]{madaan2023selfrefine}
+Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah
+  Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, Shashank
+  Gupta, Bodhisattwa~Prasad Majumder, Katherine Hermann, Sean Welleck, Amir
+  Yazdanbakhsh, and Peter Clark.
+\newblock Self-refine: Iterative refinement with self-feedback.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2023.
+
+\bibitem[Nayab et~al.(2024)Nayab, Amin, Ghani, Aslam, and
+  Ul~Ain]{nayab2024concise}
+Sania Nayab, Muhammad~Nouman Amin, Muhammad~Uzair Ghani, Muhammad~Awais Aslam,
+  and Qurat Ul~Ain.
+\newblock Concise thoughts: Impact of output length on {LLM} reasoning and
+  cost.
+\newblock \emph{arXiv preprint arXiv:2407.19825}, 2024.
+
+\bibitem[Poddar et~al.(2025)Poddar, Mishra, and Sahlgren]{poddar2025brevity}
+Shaurya Poddar, Shubhanshu Mishra, and Magnus Sahlgren.
+\newblock Brevity is the soul of sustainability.
+\newblock \emph{arXiv preprint arXiv:2506.08686}, 2025.
+
+\bibitem[Shinn et~al.(2023)Shinn, Cassano, Gopinath, Narasimhan, and
+  Yao]{shinn2023reflexion}
+Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik Narasimhan, and Shunyu
+  Yao.
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2023.
+
+\bibitem[Wang et~al.(2023)Wang, Wei, Schuurmans, Le, Chi, Narang, Chowdhery,
+  and Zhou]{wang2023selfconsistency}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed~Chi, Sharan Narang,
+  Aakanksha Chowdhery, and Denny Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language
+  models.
+\newblock \emph{arXiv preprint arXiv:2203.11171}, 2023.
+
+\bibitem[Wu et~al.(2025)Wu, Xie, Liu, Zhang, and Wang]{wu2025when}
+Yuyang Wu, Yifei Xie, Tianyi Liu, Jiaxin Zhang, and Yucheng Wang.
+\newblock When more is less: Understanding chain-of-thought length in {LLMs}.
+\newblock \emph{arXiv preprint arXiv:2502.07266}, 2025.
+
+\bibitem[Xu et~al.(2024)Xu, Jiang, Mahajan, and Radev]{xu2024pride}
+Wenda Xu, Guanglei Jiang, Sishuo Mahajan, and Dragomir Radev.
+\newblock Pride and prejudice: {LLM} amplifies self-bias in self-refinement.
+\newblock \emph{arXiv preprint arXiv:2402.11436}, 2024.
+
+\bibitem[Yao et~al.(2023)Yao, Yu, Zhao, Shafran, Griffiths, Cao, and
+  Narasimhan]{yao2023tree}
+Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas~L Griffiths, Yuan Cao,
+  and Karthik Narasimhan.
+\newblock Tree of thoughts: Deliberate problem solving with large language
+  models.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2023.
+
+\end{thebibliography}

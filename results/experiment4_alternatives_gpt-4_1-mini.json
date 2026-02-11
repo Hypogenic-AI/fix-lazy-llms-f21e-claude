@@ -1,0 +1,7212 @@
+{
+  "baseline_cot": [
+    {
+      "final_answer": "2180",
+      "gold_answer": "2280",
+      "correct": false,
+      "total_tokens": 277,
+      "response_length_words": 119
+    },
+    {
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 274,
+      "response_length_words": 123
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 226,
+      "response_length_words": 101
+    },
+    {
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "total_tokens": 279,
+      "response_length_words": 142
+    },
+    {
+      "final_answer": "273",
+      "gold_answer": "273",
+      "correct": true,
+      "total_tokens": 303,
+      "response_length_words": 102
+    },
+    {
+      "final_answer": "45",
+      "gold_answer": "45",
+      "correct": true,
+      "total_tokens": 283,
+      "response_length_words": 107
+    },
+    {
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "total_tokens": 158,
+      "response_length_words": 58
+    },
+    {
+      "final_answer": "70",
+      "gold_answer": "145",
+      "correct": false,
+      "total_tokens": 283,
+      "response_length_words": 134
+    },
+    {
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "total_tokens": 200,
+      "response_length_words": 80
+    },
+    {
+      "final_answer": "122",
+      "gold_answer": "122",
+      "correct": true,
+      "total_tokens": 277,
+      "response_length_words": 128
+    },
+    {
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "total_tokens": 386,
+      "response_length_words": 121
+    },
+    {
+      "final_answer": "80",
+      "gold_answer": "80",
+      "correct": true,
+      "total_tokens": 282,
+      "response_length_words": 118
+    },
+    {
+      "final_answer": "36",
+      "gold_answer": "36",
+      "correct": true,
+      "total_tokens": 266,
+      "response_length_words": 131
+    },
+    {
+      "final_answer": "1430",
+      "gold_answer": "1430",
+      "correct": true,
+      "total_tokens": 232,
+      "response_length_words": 85
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 182,
+      "response_length_words": 71
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 231,
+      "response_length_words": 92
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 197,
+      "response_length_words": 80
+    },
+    {
+      "final_answer": "66",
+      "gold_answer": "66",
+      "correct": true,
+      "total_tokens": 193,
+      "response_length_words": 84
+    },
+    {
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "total_tokens": 204,
+      "response_length_words": 67
+    },
+    {
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "total_tokens": 253,
+      "response_length_words": 86
+    },
+    {
+      "final_answer": "93",
+      "gold_answer": "93",
+      "correct": true,
+      "total_tokens": 232,
+      "response_length_words": 123
+    },
+    {
+      "final_answer": "2000",
+      "gold_answer": "2000",
+      "correct": true,
+      "total_tokens": 519,
+      "response_length_words": 218
+    },
+    {
+      "final_answer": "1520",
+      "gold_answer": "1520",
+      "correct": true,
+      "total_tokens": 266,
+      "response_length_words": 105
+    },
+    {
+      "final_answer": "11050",
+      "gold_answer": "11050",
+      "correct": true,
+      "total_tokens": 281,
+      "response_length_words": 121
+    },
+    {
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "total_tokens": 322,
+      "response_length_words": 121
+    },
+    {
+      "final_answer": "40000",
+      "gold_answer": "40000",
+      "correct": true,
+      "total_tokens": 268,
+      "response_length_words": 102
+    },
+    {
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "total_tokens": 202,
+      "response_length_words": 64
+    },
+    {
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 433,
+      "response_length_words": 180
+    },
+    {
+      "final_answer": "14",
+      "gold_answer": "14",
+      "correct": true,
+      "total_tokens": 325,
+      "response_length_words": 160
+    },
+    {
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "total_tokens": 246,
+      "response_length_words": 103
+    },
+    {
+      "final_answer": "145",
+      "gold_answer": "145",
+      "correct": true,
+      "total_tokens": 474,
+      "response_length_words": 172
+    },
+    {
+      "final_answer": "123",
+      "gold_answer": "123",
+      "correct": true,
+      "total_tokens": 293,
+      "response_length_words": 126
+    },
+    {
+      "final_answer": "98",
+      "gold_answer": "98",
+      "correct": true,
+      "total_tokens": 235,
+      "response_length_words": 110
+    },
+    {
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 357,
+      "response_length_words": 140
+    },
+    {
+      "final_answer": "34",
+      "gold_answer": "34",
+      "correct": true,
+      "total_tokens": 303,
+      "response_length_words": 118
+    },
+    {
+      "final_answer": "38.00",
+      "gold_answer": "38",
+      "correct": true,
+      "total_tokens": 285,
+      "response_length_words": 89
+    },
+    {
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "total_tokens": 327,
+      "response_length_words": 129
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 271,
+      "response_length_words": 120
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 228,
+      "response_length_words": 105
+    },
+    {
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "total_tokens": 290,
+      "response_length_words": 127
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 343,
+      "response_length_words": 153
+    },
+    {
+      "final_answer": "8000",
+      "gold_answer": "8000",
+      "correct": true,
+      "total_tokens": 205,
+      "response_length_words": 75
+    },
+    {
+      "final_answer": "280",
+      "gold_answer": "280",
+      "correct": true,
+      "total_tokens": 214,
+      "response_length_words": 89
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 279,
+      "response_length_words": 126
+    },
+    {
+      "final_answer": "176",
+      "gold_answer": "192",
+      "correct": false,
+      "total_tokens": 303,
+      "response_length_words": 163
+    },
+    {
+      "final_answer": "276",
+      "gold_answer": "276",
+      "correct": true,
+      "total_tokens": 283,
+      "response_length_words": 138
+    },
+    {
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "total_tokens": 323,
+      "response_length_words": 105
+    },
+    {
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "total_tokens": 331,
+      "response_length_words": 132
+    },
+    {
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "total_tokens": 219,
+      "response_length_words": 74
+    },
+    {
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "total_tokens": 339,
+      "response_length_words": 158
+    },
+    {
+      "final_answer": "147",
+      "gold_answer": "147",
+      "correct": true,
+      "total_tokens": 298,
+      "response_length_words": 157
+    },
+    {
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "total_tokens": 340,
+      "response_length_words": 184
+    },
+    {
+      "final_answer": "1800",
+      "gold_answer": "1800",
+      "correct": true,
+      "total_tokens": 247,
+      "response_length_words": 114
+    },
+    {
+      "final_answer": "20",
+      "gold_answer": "20",
+      "correct": true,
+      "total_tokens": 257,
+      "response_length_words": 108
+    },
+    {
+      "final_answer": "140",
+      "gold_answer": "140",
+      "correct": true,
+      "total_tokens": 191,
+      "response_length_words": 77
+    },
+    {
+      "final_answer": "36.36",
+      "gold_answer": "36",
+      "correct": false,
+      "total_tokens": 407,
+      "response_length_words": 175
+    },
+    {
+      "final_answer": "1.00",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 339,
+      "response_length_words": 169
+    },
+    {
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 256,
+      "response_length_words": 94
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 318,
+      "response_length_words": 156
+    },
+    {
+      "final_answer": "860",
+      "gold_answer": "860",
+      "correct": true,
+      "total_tokens": 361,
+      "response_length_words": 173
+    },
+    {
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "total_tokens": 303,
+      "response_length_words": 119
+    },
+    {
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "total_tokens": 389,
+      "response_length_words": 155
+    },
+    {
+      "final_answer": "350",
+      "gold_answer": "350",
+      "correct": true,
+      "total_tokens": 276,
+      "response_length_words": 120
+    },
+    {
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "total_tokens": 292,
+      "response_length_words": 95
+    },
+    {
+      "final_answer": "133",
+      "gold_answer": "133",
+      "correct": true,
+      "total_tokens": 161,
+      "response_length_words": 62
+    },
+    {
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "total_tokens": 412,
+      "response_length_words": 189
+    },
+    {
+      "final_answer": "13",
+      "gold_answer": "13",
+      "correct": true,
+      "total_tokens": 233,
+      "response_length_words": 101
+    },
+    {
+      "final_answer": "130",
+      "gold_answer": "130",
+      "correct": true,
+      "total_tokens": 288,
+      "response_length_words": 126
+    },
+    {
+      "final_answer": "2125",
+      "gold_answer": "2125",
+      "correct": true,
+      "total_tokens": 333,
+      "response_length_words": 162
+    },
+    {
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 299,
+      "response_length_words": 104
+    },
+    {
+      "final_answer": "120",
+      "gold_answer": "120",
+      "correct": true,
+      "total_tokens": 236,
+      "response_length_words": 106
+    },
+    {
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "total_tokens": 266,
+      "response_length_words": 89
+    },
+    {
+      "final_answer": "144",
+      "gold_answer": "144",
+      "correct": true,
+      "total_tokens": 331,
+      "response_length_words": 167
+    },
+    {
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "total_tokens": 241,
+      "response_length_words": 102
+    },
+    {
+      "final_answer": "450",
+      "gold_answer": "450",
+      "correct": true,
+      "total_tokens": 218,
+      "response_length_words": 92
+    },
+    {
+      "final_answer": "4400",
+      "gold_answer": "4400",
+      "correct": true,
+      "total_tokens": 456,
+      "response_length_words": 203
+    },
+    {
+      "final_answer": "450",
+      "gold_answer": "450",
+      "correct": true,
+      "total_tokens": 290,
+      "response_length_words": 108
+    },
+    {
+      "final_answer": "64",
+      "gold_answer": "64",
+      "correct": true,
+      "total_tokens": 585,
+      "response_length_words": 264
+    },
+    {
+      "final_answer": "27",
+      "gold_answer": "27",
+      "correct": true,
+      "total_tokens": 375,
+      "response_length_words": 148
+    },
+    {
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "total_tokens": 207,
+      "response_length_words": 92
+    },
+    {
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "total_tokens": 252,
+      "response_length_words": 105
+    },
+    {
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "total_tokens": 418,
+      "response_length_words": 182
+    },
+    {
+      "final_answer": "4",
+      "gold_answer": "4",
+      "correct": true,
+      "total_tokens": 204,
+      "response_length_words": 75
+    },
+    {
+      "final_answer": "79",
+      "gold_answer": "79",
+      "correct": true,
+      "total_tokens": 203,
+      "response_length_words": 73
+    },
+    {
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "total_tokens": 320,
+      "response_length_words": 137
+    },
+    {
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "total_tokens": 190,
+      "response_length_words": 87
+    },
+    {
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "total_tokens": 236,
+      "response_length_words": 106
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 283,
+      "response_length_words": 79
+    },
+    {
+      "final_answer": "140",
+      "gold_answer": "170",
+      "correct": false,
+      "total_tokens": 377,
+      "response_length_words": 193
+    },
+    {
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "total_tokens": 189,
+      "response_length_words": 70
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 165,
+      "response_length_words": 49
+    },
+    {
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "total_tokens": 365,
+      "response_length_words": 178
+    },
+    {
+      "final_answer": "310",
+      "gold_answer": "310",
+      "correct": true,
+      "total_tokens": 441,
+      "response_length_words": 230
+    },
+    {
+      "final_answer": "230",
+      "gold_answer": "230",
+      "correct": true,
+      "total_tokens": 245,
+      "response_length_words": 90
+    },
+    {
+      "final_answer": "650",
+      "gold_answer": "650",
+      "correct": true,
+      "total_tokens": 326,
+      "response_length_words": 157
+    },
+    {
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "total_tokens": 256,
+      "response_length_words": 103
+    },
+    {
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 323,
+      "response_length_words": 130
+    },
+    {
+      "final_answer": "1200",
+      "gold_answer": "1600",
+      "correct": false,
+      "total_tokens": 715,
+      "response_length_words": 374
+    },
+    {
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "total_tokens": 330,
+      "response_length_words": 131
+    },
+    {
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 241,
+      "response_length_words": 95
+    },
+    {
+      "final_answer": "2400",
+      "gold_answer": "2400",
+      "correct": true,
+      "total_tokens": 343,
+      "response_length_words": 172
+    },
+    {
+      "final_answer": "7000",
+      "gold_answer": "7000",
+      "correct": true,
+      "total_tokens": 353,
+      "response_length_words": 116
+    },
+    {
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "total_tokens": 337,
+      "response_length_words": 121
+    },
+    {
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "total_tokens": 170,
+      "response_length_words": 64
+    },
+    {
+      "final_answer": "28",
+      "gold_answer": "28",
+      "correct": true,
+      "total_tokens": 210,
+      "response_length_words": 84
+    },
+    {
+      "final_answer": "68",
+      "gold_answer": "68",
+      "correct": true,
+      "total_tokens": 550,
+      "response_length_words": 308
+    },
+    {
+      "final_answer": "130000",
+      "gold_answer": "130000",
+      "correct": true,
+      "total_tokens": 233,
+      "response_length_words": 99
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 301,
+      "response_length_words": 120
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 419,
+      "response_length_words": 183
+    },
+    {
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "total_tokens": 183,
+      "response_length_words": 63
+    },
+    {
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "total_tokens": 229,
+      "response_length_words": 88
+    },
+    {
+      "final_answer": "120000",
+      "gold_answer": "120000",
+      "correct": true,
+      "total_tokens": 526,
+      "response_length_words": 254
+    },
+    {
+      "final_answer": "1218",
+      "gold_answer": "1218",
+      "correct": true,
+      "total_tokens": 235,
+      "response_length_words": 85
+    },
+    {
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "total_tokens": 332,
+      "response_length_words": 126
+    },
+    {
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "total_tokens": 226,
+      "response_length_words": 76
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 219,
+      "response_length_words": 82
+    },
+    {
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "total_tokens": 231,
+      "response_length_words": 97
+    },
+    {
+      "final_answer": "17",
+      "gold_answer": "17",
+      "correct": true,
+      "total_tokens": 244,
+      "response_length_words": 108
+    },
+    {
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "total_tokens": 243,
+      "response_length_words": 106
+    },
+    {
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "total_tokens": 248,
+      "response_length_words": 95
+    },
+    {
+      "final_answer": "2.00",
+      "gold_answer": "2",
+      "correct": true,
+      "total_tokens": 287,
+      "response_length_words": 115
+    },
+    {
+      "final_answer": "90000",
+      "gold_answer": "90000",
+      "correct": true,
+      "total_tokens": 238,
+      "response_length_words": 101
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 456,
+      "response_length_words": 176
+    },
+    {
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "total_tokens": 173,
+      "response_length_words": 62
+    },
+    {
+      "final_answer": "14",
+      "gold_answer": "21",
+      "correct": false,
+      "total_tokens": 223,
+      "response_length_words": 94
+    },
+    {
+      "final_answer": "2",
+      "gold_answer": "2",
+      "correct": true,
+      "total_tokens": 257,
+      "response_length_words": 104
+    },
+    {
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "total_tokens": 305,
+      "response_length_words": 137
+    },
+    {
+      "final_answer": "104",
+      "gold_answer": "104",
+      "correct": true,
+      "total_tokens": 459,
+      "response_length_words": 220
+    },
+    {
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "total_tokens": 276,
+      "response_length_words": 131
+    },
+    {
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "total_tokens": 392,
+      "response_length_words": 189
+    },
+    {
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "total_tokens": 183,
+      "response_length_words": 69
+    },
+    {
+      "final_answer": "260",
+      "gold_answer": "260",
+      "correct": true,
+      "total_tokens": 257,
+      "response_length_words": 132
+    },
+    {
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "total_tokens": 242,
+      "response_length_words": 99
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 245,
+      "response_length_words": 124
+    },
+    {
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 161,
+      "response_length_words": 65
+    },
+    {
+      "final_answer": "160",
+      "gold_answer": "160",
+      "correct": true,
+      "total_tokens": 254,
+      "response_length_words": 114
+    },
+    {
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "total_tokens": 171,
+      "response_length_words": 66
+    },
+    {
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 177,
+      "response_length_words": 60
+    },
+    {
+      "final_answer": "1450000",
+      "gold_answer": "1450000",
+      "correct": true,
+      "total_tokens": 438,
+      "response_length_words": 174
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 194,
+      "response_length_words": 92
+    },
+    {
+      "final_answer": "490",
+      "gold_answer": "490",
+      "correct": true,
+      "total_tokens": 174,
+      "response_length_words": 73
+    },
+    {
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "total_tokens": 298,
+      "response_length_words": 132
+    },
+    {
+      "final_answer": "24",
+      "gold_answer": "24",
+      "correct": true,
+      "total_tokens": 256,
+      "response_length_words": 120
+    },
+    {
+      "final_answer": "131250",
+      "gold_answer": "131250",
+      "correct": true,
+      "total_tokens": 490,
+      "response_length_words": 177
+    },
+    {
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "total_tokens": 178,
+      "response_length_words": 84
+    },
+    {
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "total_tokens": 295,
+      "response_length_words": 131
+    },
+    {
+      "final_answer": "193",
+      "gold_answer": "193",
+      "correct": true,
+      "total_tokens": 239,
+      "response_length_words": 108
+    },
+    {
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 351,
+      "response_length_words": 154
+    },
+    {
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 480,
+      "response_length_words": 188
+    },
+    {
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "total_tokens": 317,
+      "response_length_words": 130
+    }
+  ],
+  "high_stakes": [
+    {
+      "final_answer": "2180",
+      "gold_answer": "2280",
+      "correct": false,
+      "total_tokens": 309,
+      "response_length_words": 112
+    },
+    {
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 318,
+      "response_length_words": 108
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 376,
+      "response_length_words": 128
+    },
+    {
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "total_tokens": 340,
+      "response_length_words": 138
+    },
+    {
+      "final_answer": "273",
+      "gold_answer": "273",
+      "correct": true,
+      "total_tokens": 344,
+      "response_length_words": 120
+    },
+    {
+      "final_answer": "45",
+      "gold_answer": "45",
+      "correct": true,
+      "total_tokens": 327,
+      "response_length_words": 117
+    },
+    {
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "total_tokens": 224,
+      "response_length_words": 77
+    },
+    {
+      "final_answer": "70",
+      "gold_answer": "145",
+      "correct": false,
+      "total_tokens": 412,
+      "response_length_words": 211
+    },
+    {
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "total_tokens": 263,
+      "response_length_words": 91
+    },
+    {
+      "final_answer": "122",
+      "gold_answer": "122",
+      "correct": true,
+      "total_tokens": 368,
+      "response_length_words": 161
+    },
+    {
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "total_tokens": 436,
+      "response_length_words": 144
+    },
+    {
+      "final_answer": "80",
+      "gold_answer": "80",
+      "correct": true,
+      "total_tokens": 322,
+      "response_length_words": 118
+    },
+    {
+      "final_answer": "36",
+      "gold_answer": "36",
+      "correct": true,
+      "total_tokens": 301,
+      "response_length_words": 122
+    },
+    {
+      "final_answer": "1430",
+      "gold_answer": "1430",
+      "correct": true,
+      "total_tokens": 259,
+      "response_length_words": 76
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 296,
+      "response_length_words": 99
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 247,
+      "response_length_words": 88
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 277,
+      "response_length_words": 102
+    },
+    {
+      "final_answer": "66",
+      "gold_answer": "66",
+      "correct": true,
+      "total_tokens": 212,
+      "response_length_words": 72
+    },
+    {
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "total_tokens": 284,
+      "response_length_words": 95
+    },
+    {
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "total_tokens": 378,
+      "response_length_words": 130
+    },
+    {
+      "final_answer": "93",
+      "gold_answer": "93",
+      "correct": true,
+      "total_tokens": 262,
+      "response_length_words": 93
+    },
+    {
+      "final_answer": "2000",
+      "gold_answer": "2000",
+      "correct": true,
+      "total_tokens": 428,
+      "response_length_words": 167
+    },
+    {
+      "final_answer": "1520",
+      "gold_answer": "1520",
+      "correct": true,
+      "total_tokens": 286,
+      "response_length_words": 92
+    },
+    {
+      "final_answer": "11050",
+      "gold_answer": "11050",
+      "correct": true,
+      "total_tokens": 338,
+      "response_length_words": 124
+    },
+    {
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "total_tokens": 389,
+      "response_length_words": 143
+    },
+    {
+      "final_answer": "40000",
+      "gold_answer": "40000",
+      "correct": true,
+      "total_tokens": 359,
+      "response_length_words": 115
+    },
+    {
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "total_tokens": 247,
+      "response_length_words": 67
+    },
+    {
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 560,
+      "response_length_words": 237
+    },
+    {
+      "final_answer": "14",
+      "gold_answer": "14",
+      "correct": true,
+      "total_tokens": 378,
+      "response_length_words": 176
+    },
+    {
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "total_tokens": 359,
+      "response_length_words": 150
+    },
+    {
+      "final_answer": "145",
+      "gold_answer": "145",
+      "correct": true,
+      "total_tokens": 506,
+      "response_length_words": 224
+    },
+    {
+      "final_answer": "123",
+      "gold_answer": "123",
+      "correct": true,
+      "total_tokens": 303,
+      "response_length_words": 116
+    },
+    {
+      "final_answer": "98",
+      "gold_answer": "98",
+      "correct": true,
+      "total_tokens": 408,
+      "response_length_words": 147
+    },
+    {
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 489,
+      "response_length_words": 193
+    },
+    {
+      "final_answer": "34",
+      "gold_answer": "34",
+      "correct": true,
+      "total_tokens": 356,
+      "response_length_words": 126
+    },
+    {
+      "final_answer": "38.00",
+      "gold_answer": "38",
+      "correct": true,
+      "total_tokens": 374,
+      "response_length_words": 115
+    },
+    {
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "total_tokens": 358,
+      "response_length_words": 128
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 303,
+      "response_length_words": 114
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 275,
+      "response_length_words": 116
+    },
+    {
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "total_tokens": 329,
+      "response_length_words": 129
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 428,
+      "response_length_words": 163
+    },
+    {
+      "final_answer": "8000",
+      "gold_answer": "8000",
+      "correct": true,
+      "total_tokens": 248,
+      "response_length_words": 85
+    },
+    {
+      "final_answer": "280",
+      "gold_answer": "280",
+      "correct": true,
+      "total_tokens": 259,
+      "response_length_words": 100
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 318,
+      "response_length_words": 129
+    },
+    {
+      "final_answer": "176",
+      "gold_answer": "192",
+      "correct": false,
+      "total_tokens": 385,
+      "response_length_words": 168
+    },
+    {
+      "final_answer": "276",
+      "gold_answer": "276",
+      "correct": true,
+      "total_tokens": 384,
+      "response_length_words": 173
+    },
+    {
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "total_tokens": 355,
+      "response_length_words": 105
+    },
+    {
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "total_tokens": 393,
+      "response_length_words": 147
+    },
+    {
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "total_tokens": 299,
+      "response_length_words": 94
+    },
+    {
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "total_tokens": 373,
+      "response_length_words": 158
+    },
+    {
+      "final_answer": "147",
+      "gold_answer": "147",
+      "correct": true,
+      "total_tokens": 295,
+      "response_length_words": 121
+    },
+    {
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "total_tokens": 373,
+      "response_length_words": 186
+    },
+    {
+      "final_answer": "1800",
+      "gold_answer": "1800",
+      "correct": true,
+      "total_tokens": 389,
+      "response_length_words": 162
+    },
+    {
+      "final_answer": "20",
+      "gold_answer": "20",
+      "correct": true,
+      "total_tokens": 384,
+      "response_length_words": 134
+    },
+    {
+      "final_answer": "140",
+      "gold_answer": "140",
+      "correct": true,
+      "total_tokens": 321,
+      "response_length_words": 160
+    },
+    {
+      "final_answer": "36",
+      "gold_answer": "36",
+      "correct": true,
+      "total_tokens": 489,
+      "response_length_words": 231
+    },
+    {
+      "final_answer": "1.00",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 372,
+      "response_length_words": 144
+    },
+    {
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 291,
+      "response_length_words": 97
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 413,
+      "response_length_words": 206
+    },
+    {
+      "final_answer": "860",
+      "gold_answer": "860",
+      "correct": true,
+      "total_tokens": 432,
+      "response_length_words": 196
+    },
+    {
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "total_tokens": 410,
+      "response_length_words": 155
+    },
+    {
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "total_tokens": 431,
+      "response_length_words": 163
+    },
+    {
+      "final_answer": "350",
+      "gold_answer": "350",
+      "correct": true,
+      "total_tokens": 329,
+      "response_length_words": 142
+    },
+    {
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "total_tokens": 324,
+      "response_length_words": 95
+    },
+    {
+      "final_answer": "133",
+      "gold_answer": "133",
+      "correct": true,
+      "total_tokens": 228,
+      "response_length_words": 72
+    },
+    {
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "total_tokens": 486,
+      "response_length_words": 210
+    },
+    {
+      "final_answer": "13",
+      "gold_answer": "13",
+      "correct": true,
+      "total_tokens": 263,
+      "response_length_words": 93
+    },
+    {
+      "final_answer": "130",
+      "gold_answer": "130",
+      "correct": true,
+      "total_tokens": 320,
+      "response_length_words": 126
+    },
+    {
+      "final_answer": "2125",
+      "gold_answer": "2125",
+      "correct": true,
+      "total_tokens": 306,
+      "response_length_words": 99
+    },
+    {
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 345,
+      "response_length_words": 118
+    },
+    {
+      "final_answer": "120",
+      "gold_answer": "120",
+      "correct": true,
+      "total_tokens": 318,
+      "response_length_words": 115
+    },
+    {
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "total_tokens": 330,
+      "response_length_words": 117
+    },
+    {
+      "final_answer": "144",
+      "gold_answer": "144",
+      "correct": true,
+      "total_tokens": 413,
+      "response_length_words": 185
+    },
+    {
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "total_tokens": 290,
+      "response_length_words": 102
+    },
+    {
+      "final_answer": "450",
+      "gold_answer": "450",
+      "correct": true,
+      "total_tokens": 225,
+      "response_length_words": 74
+    },
+    {
+      "final_answer": "4400",
+      "gold_answer": "4400",
+      "correct": true,
+      "total_tokens": 579,
+      "response_length_words": 253
+    },
+    {
+      "final_answer": "450",
+      "gold_answer": "450",
+      "correct": true,
+      "total_tokens": 392,
+      "response_length_words": 134
+    },
+    {
+      "final_answer": "2",
+      "gold_answer": "64",
+      "correct": false,
+      "total_tokens": 633,
+      "response_length_words": 260
+    },
+    {
+      "final_answer": "27",
+      "gold_answer": "27",
+      "correct": true,
+      "total_tokens": 436,
+      "response_length_words": 167
+    },
+    {
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "total_tokens": 288,
+      "response_length_words": 117
+    },
+    {
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "total_tokens": 321,
+      "response_length_words": 100
+    },
+    {
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "total_tokens": 450,
+      "response_length_words": 182
+    },
+    {
+      "final_answer": "4",
+      "gold_answer": "4",
+      "correct": true,
+      "total_tokens": 293,
+      "response_length_words": 101
+    },
+    {
+      "final_answer": "79",
+      "gold_answer": "79",
+      "correct": true,
+      "total_tokens": 269,
+      "response_length_words": 97
+    },
+    {
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "total_tokens": 396,
+      "response_length_words": 171
+    },
+    {
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "total_tokens": 225,
+      "response_length_words": 83
+    },
+    {
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "total_tokens": 315,
+      "response_length_words": 133
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 302,
+      "response_length_words": 97
+    },
+    {
+      "final_answer": "140",
+      "gold_answer": "170",
+      "correct": false,
+      "total_tokens": 441,
+      "response_length_words": 180
+    },
+    {
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "total_tokens": 288,
+      "response_length_words": 90
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 244,
+      "response_length_words": 73
+    },
+    {
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "total_tokens": 389,
+      "response_length_words": 165
+    },
+    {
+      "final_answer": "310",
+      "gold_answer": "310",
+      "correct": true,
+      "total_tokens": 422,
+      "response_length_words": 216
+    },
+    {
+      "final_answer": "230",
+      "gold_answer": "230",
+      "correct": true,
+      "total_tokens": 334,
+      "response_length_words": 102
+    },
+    {
+      "final_answer": "650",
+      "gold_answer": "650",
+      "correct": true,
+      "total_tokens": 563,
+      "response_length_words": 307
+    },
+    {
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "total_tokens": 350,
+      "response_length_words": 133
+    },
+    {
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 392,
+      "response_length_words": 147
+    },
+    {
+      "final_answer": "1200",
+      "gold_answer": "1600",
+      "correct": false,
+      "total_tokens": 634,
+      "response_length_words": 305
+    },
+    {
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "total_tokens": 466,
+      "response_length_words": 197
+    },
+    {
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 312,
+      "response_length_words": 116
+    },
+    {
+      "final_answer": "2400",
+      "gold_answer": "2400",
+      "correct": true,
+      "total_tokens": 400,
+      "response_length_words": 194
+    },
+    {
+      "final_answer": "7000",
+      "gold_answer": "7000",
+      "correct": true,
+      "total_tokens": 374,
+      "response_length_words": 136
+    },
+    {
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "total_tokens": 405,
+      "response_length_words": 145
+    },
+    {
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "total_tokens": 222,
+      "response_length_words": 80
+    },
+    {
+      "final_answer": "28",
+      "gold_answer": "28",
+      "correct": true,
+      "total_tokens": 274,
+      "response_length_words": 85
+    },
+    {
+      "final_answer": "68",
+      "gold_answer": "68",
+      "correct": true,
+      "total_tokens": 508,
+      "response_length_words": 261
+    },
+    {
+      "final_answer": "130000",
+      "gold_answer": "130000",
+      "correct": true,
+      "total_tokens": 306,
+      "response_length_words": 113
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 322,
+      "response_length_words": 118
+    },
+    {
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 477,
+      "response_length_words": 201
+    },
+    {
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "total_tokens": 257,
+      "response_length_words": 77
+    },
+    {
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "total_tokens": 301,
+      "response_length_words": 120
+    },
+    {
+      "final_answer": "120000",
+      "gold_answer": "120000",
+      "correct": true,
+      "total_tokens": 538,
+      "response_length_words": 248
+    },
+    {
+      "final_answer": "1218",
+      "gold_answer": "1218",
+      "correct": true,
+      "total_tokens": 293,
+      "response_length_words": 98
+    },
+    {
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "total_tokens": 364,
+      "response_length_words": 127
+    },
+    {
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "total_tokens": 359,
+      "response_length_words": 136
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 273,
+      "response_length_words": 83
+    },
+    {
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "total_tokens": 268,
+      "response_length_words": 91
+    },
+    {
+      "final_answer": "17",
+      "gold_answer": "17",
+      "correct": true,
+      "total_tokens": 307,
+      "response_length_words": 137
+    },
+    {
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "total_tokens": 275,
+      "response_length_words": 106
+    },
+    {
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "total_tokens": 303,
+      "response_length_words": 103
+    },
+    {
+      "final_answer": "2.00",
+      "gold_answer": "2",
+      "correct": true,
+      "total_tokens": 408,
+      "response_length_words": 159
+    },
+    {
+      "final_answer": "90000",
+      "gold_answer": "90000",
+      "correct": true,
+      "total_tokens": 311,
+      "response_length_words": 123
+    },
+    {
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 501,
+      "response_length_words": 182
+    },
+    {
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "total_tokens": 241,
+      "response_length_words": 85
+    },
+    {
+      "final_answer": "14",
+      "gold_answer": "21",
+      "correct": false,
+      "total_tokens": 323,
+      "response_length_words": 152
+    },
+    {
+      "final_answer": "2",
+      "gold_answer": "2",
+      "correct": true,
+      "total_tokens": 415,
+      "response_length_words": 136
+    },
+    {
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "total_tokens": 350,
+      "response_length_words": 148
+    },
+    {
+      "final_answer": "104",
+      "gold_answer": "104",
+      "correct": true,
+      "total_tokens": 514,
+      "response_length_words": 235
+    },
+    {
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "total_tokens": 324,
+      "response_length_words": 108
+    },
+    {
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "total_tokens": 408,
+      "response_length_words": 139
+    },
+    {
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "total_tokens": 267,
+      "response_length_words": 115
+    },
+    {
+      "final_answer": "260",
+      "gold_answer": "260",
+      "correct": true,
+      "total_tokens": 311,
+      "response_length_words": 136
+    },
+    {
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "total_tokens": 269,
+      "response_length_words": 99
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 274,
+      "response_length_words": 112
+    },
+    {
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 191,
+      "response_length_words": 65
+    },
+    {
+      "final_answer": "160",
+      "gold_answer": "160",
+      "correct": true,
+      "total_tokens": 343,
+      "response_length_words": 131
+    },
+    {
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "total_tokens": 201,
+      "response_length_words": 67
+    },
+    {
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 241,
+      "response_length_words": 81
+    },
+    {
+      "final_answer": "1450000",
+      "gold_answer": "1450000",
+      "correct": true,
+      "total_tokens": 547,
+      "response_length_words": 248
+    },
+    {
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 224,
+      "response_length_words": 86
+    },
+    {
+      "final_answer": "490",
+      "gold_answer": "490",
+      "correct": true,
+      "total_tokens": 228,
+      "response_length_words": 85
+    },
+    {
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "total_tokens": 393,
+      "response_length_words": 161
+    },
+    {
+      "final_answer": "24",
+      "gold_answer": "24",
+      "correct": true,
+      "total_tokens": 330,
+      "response_length_words": 126
+    },
+    {
+      "final_answer": "131250",
+      "gold_answer": "131250",
+      "correct": true,
+      "total_tokens": 506,
+      "response_length_words": 161
+    },
+    {
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "total_tokens": 201,
+      "response_length_words": 69
+    },
+    {
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "total_tokens": 377,
+      "response_length_words": 152
+    },
+    {
+      "final_answer": "193",
+      "gold_answer": "193",
+      "correct": true,
+      "total_tokens": 324,
+      "response_length_words": 147
+    },
+    {
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 389,
+      "response_length_words": 152
+    },
+    {
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 491,
+      "response_length_words": 199
+    },
+    {
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "total_tokens": 402,
+      "response_length_words": 123
+    }
+  ],
+  "explicit_rubric": [
+    {
+      "initial_answer": "2180",
+      "final_answer": "2180",
+      "gold_answer": "2280",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 942,
+      "response_length_words": 192
+    },
+    {
+      "initial_answer": "1",
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 863,
+      "response_length_words": 147
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 761,
+      "response_length_words": 164
+    },
+    {
+      "initial_answer": "12",
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 867,
+      "response_length_words": 155
+    },
+    {
+      "initial_answer": "273",
+      "final_answer": "273",
+      "gold_answer": "273",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 945,
+      "response_length_words": 150
+    },
+    {
+      "initial_answer": "45",
+      "final_answer": "45",
+      "gold_answer": "45",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 938,
+      "response_length_words": 171
+    },
+    {
+      "initial_answer": "21",
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 585,
+      "response_length_words": 124
+    },
+    {
+      "initial_answer": "70",
+      "final_answer": "70",
+      "gold_answer": "145",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 933,
+      "response_length_words": 177
+    },
+    {
+      "initial_answer": "60",
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 664,
+      "response_length_words": 121
+    },
+    {
+      "initial_answer": "122",
+      "final_answer": "122",
+      "gold_answer": "122",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 851,
+      "response_length_words": 137
+    },
+    {
+      "initial_answer": "29",
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1169,
+      "response_length_words": 193
+    },
+    {
+      "initial_answer": "80",
+      "final_answer": "80",
+      "gold_answer": "80",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 890,
+      "response_length_words": 156
+    },
+    {
+      "initial_answer": "36",
+      "final_answer": "36",
+      "gold_answer": "36",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 871,
+      "response_length_words": 179
+    },
+    {
+      "initial_answer": "1430",
+      "final_answer": "1430",
+      "gold_answer": "1430",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 773,
+      "response_length_words": 145
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 643,
+      "response_length_words": 140
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 757,
+      "response_length_words": 135
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 650,
+      "response_length_words": 117
+    },
+    {
+      "initial_answer": "66",
+      "final_answer": "66",
+      "gold_answer": "66",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 674,
+      "response_length_words": 145
+    },
+    {
+      "initial_answer": "15",
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 666,
+      "response_length_words": 110
+    },
+    {
+      "initial_answer": "40",
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 768,
+      "response_length_words": 121
+    },
+    {
+      "initial_answer": "93",
+      "final_answer": "93",
+      "gold_answer": "93",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 747,
+      "response_length_words": 142
+    },
+    {
+      "initial_answer": "2000",
+      "final_answer": "4",
+      "gold_answer": "2000",
+      "correct": false,
+      "initial_correct": true,
+      "answer_changed": true,
+      "total_tokens": 1521,
+      "response_length_words": 217
+    },
+    {
+      "initial_answer": "1520",
+      "final_answer": "1520",
+      "gold_answer": "1520",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 842,
+      "response_length_words": 144
+    },
+    {
+      "initial_answer": "11050",
+      "final_answer": "11050",
+      "gold_answer": "11050",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1012,
+      "response_length_words": 245
+    },
+    {
+      "initial_answer": "90",
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1026,
+      "response_length_words": 185
+    },
+    {
+      "initial_answer": "40000",
+      "final_answer": "40000",
+      "gold_answer": "40000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 848,
+      "response_length_words": 135
+    },
+    {
+      "initial_answer": "21",
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 677,
+      "response_length_words": 123
+    },
+    {
+      "initial_answer": "18",
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1539,
+      "response_length_words": 331
+    },
+    {
+      "initial_answer": "14",
+      "final_answer": "14",
+      "gold_answer": "14",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1048,
+      "response_length_words": 217
+    },
+    {
+      "initial_answer": "23",
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 791,
+      "response_length_words": 144
+    },
+    {
+      "initial_answer": "145",
+      "final_answer": "145",
+      "gold_answer": "145",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1443,
+      "response_length_words": 235
+    },
+    {
+      "initial_answer": "123",
+      "final_answer": "123",
+      "gold_answer": "123",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 965,
+      "response_length_words": 188
+    },
+    {
+      "initial_answer": "98",
+      "final_answer": "98",
+      "gold_answer": "98",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 765,
+      "response_length_words": 143
+    },
+    {
+      "initial_answer": "7.00",
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1155,
+      "response_length_words": 202
+    },
+    {
+      "initial_answer": "34",
+      "final_answer": "34",
+      "gold_answer": "34",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 981,
+      "response_length_words": 162
+    },
+    {
+      "initial_answer": "38.00",
+      "final_answer": "38.00",
+      "gold_answer": "38",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 886,
+      "response_length_words": 137
+    },
+    {
+      "initial_answer": "320",
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1094,
+      "response_length_words": 213
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 862,
+      "response_length_words": 154
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 757,
+      "response_length_words": 146
+    },
+    {
+      "initial_answer": "84",
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 931,
+      "response_length_words": 178
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1061,
+      "response_length_words": 199
+    },
+    {
+      "initial_answer": "8000",
+      "final_answer": "8000",
+      "gold_answer": "8000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 717,
+      "response_length_words": 140
+    },
+    {
+      "initial_answer": "280",
+      "final_answer": "280",
+      "gold_answer": "280",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 759,
+      "response_length_words": 169
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 836,
+      "response_length_words": 134
+    },
+    {
+      "initial_answer": "176",
+      "final_answer": "192",
+      "gold_answer": "192",
+      "correct": true,
+      "initial_correct": false,
+      "answer_changed": true,
+      "total_tokens": 1410,
+      "response_length_words": 526
+    },
+    {
+      "initial_answer": "276",
+      "final_answer": "276",
+      "gold_answer": "276",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 885,
+      "response_length_words": 157
+    },
+    {
+      "initial_answer": "32",
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1127,
+      "response_length_words": 232
+    },
+    {
+      "initial_answer": "25",
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1024,
+      "response_length_words": 174
+    },
+    {
+      "initial_answer": "10",
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 745,
+      "response_length_words": 155
+    },
+    {
+      "initial_answer": "84",
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1026,
+      "response_length_words": 180
+    },
+    {
+      "initial_answer": "147",
+      "final_answer": "147",
+      "gold_answer": "147",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 947,
+      "response_length_words": 192
+    },
+    {
+      "initial_answer": "25",
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1099,
+      "response_length_words": 210
+    },
+    {
+      "initial_answer": "1800",
+      "final_answer": "1800",
+      "gold_answer": "1800",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 789,
+      "response_length_words": 138
+    },
+    {
+      "initial_answer": "20",
+      "final_answer": "20",
+      "gold_answer": "20",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 852,
+      "response_length_words": 160
+    },
+    {
+      "initial_answer": "140",
+      "final_answer": "140",
+      "gold_answer": "140",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 662,
+      "response_length_words": 139
+    },
+    {
+      "initial_answer": "36.36",
+      "final_answer": "36.36",
+      "gold_answer": "36",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 1196,
+      "response_length_words": 201
+    },
+    {
+      "initial_answer": "1.00",
+      "final_answer": "1.00",
+      "gold_answer": "1",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1094,
+      "response_length_words": 208
+    },
+    {
+      "initial_answer": "1",
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 888,
+      "response_length_words": 173
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1020,
+      "response_length_words": 198
+    },
+    {
+      "initial_answer": "860",
+      "final_answer": "860",
+      "gold_answer": "860",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1131,
+      "response_length_words": 224
+    },
+    {
+      "initial_answer": "60",
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 998,
+      "response_length_words": 189
+    },
+    {
+      "initial_answer": "23",
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1238,
+      "response_length_words": 231
+    },
+    {
+      "initial_answer": "350",
+      "final_answer": "350",
+      "gold_answer": "350",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 904,
+      "response_length_words": 176
+    },
+    {
+      "initial_answer": "100",
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1000,
+      "response_length_words": 184
+    },
+    {
+      "initial_answer": "133",
+      "final_answer": "133",
+      "gold_answer": "133",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 568,
+      "response_length_words": 110
+    },
+    {
+      "initial_answer": "112",
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1327,
+      "response_length_words": 262
+    },
+    {
+      "initial_answer": "13",
+      "final_answer": "13",
+      "gold_answer": "13",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 755,
+      "response_length_words": 145
+    },
+    {
+      "initial_answer": "130",
+      "final_answer": "130",
+      "gold_answer": "130",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 996,
+      "response_length_words": 208
+    },
+    {
+      "initial_answer": "2125",
+      "final_answer": "2125",
+      "gold_answer": "2125",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1261,
+      "response_length_words": 338
+    },
+    {
+      "initial_answer": "7",
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 935,
+      "response_length_words": 163
+    },
+    {
+      "initial_answer": "120",
+      "final_answer": "120",
+      "gold_answer": "120",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 786,
+      "response_length_words": 153
+    },
+    {
+      "initial_answer": "8",
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 932,
+      "response_length_words": 198
+    },
+    {
+      "initial_answer": "144",
+      "final_answer": "144",
+      "gold_answer": "144",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1012,
+      "response_length_words": 182
+    },
+    {
+      "initial_answer": "6",
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 759,
+      "response_length_words": 131
+    },
+    {
+      "initial_answer": "450",
+      "final_answer": "450",
+      "gold_answer": "450",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 708,
+      "response_length_words": 125
+    },
+    {
+      "initial_answer": "4400",
+      "final_answer": "4400",
+      "gold_answer": "4400",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1433,
+      "response_length_words": 257
+    },
+    {
+      "initial_answer": "450",
+      "final_answer": "900",
+      "gold_answer": "450",
+      "correct": false,
+      "initial_correct": true,
+      "answer_changed": true,
+      "total_tokens": 1323,
+      "response_length_words": 399
+    },
+    {
+      "initial_answer": "64",
+      "final_answer": "64",
+      "gold_answer": "64",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1727,
+      "response_length_words": 291
+    },
+    {
+      "initial_answer": "27",
+      "final_answer": "27",
+      "gold_answer": "27",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1178,
+      "response_length_words": 201
+    },
+    {
+      "initial_answer": "112",
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 679,
+      "response_length_words": 125
+    },
+    {
+      "initial_answer": "32",
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 801,
+      "response_length_words": 140
+    },
+    {
+      "initial_answer": "6",
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1274,
+      "response_length_words": 232
+    },
+    {
+      "initial_answer": "4",
+      "final_answer": "4",
+      "gold_answer": "4",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 685,
+      "response_length_words": 133
+    },
+    {
+      "initial_answer": "79",
+      "final_answer": "79",
+      "gold_answer": "79",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 682,
+      "response_length_words": 130
+    },
+    {
+      "initial_answer": "35",
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1101,
+      "response_length_words": 274
+    },
+    {
+      "initial_answer": "100",
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 674,
+      "response_length_words": 154
+    },
+    {
+      "initial_answer": "40",
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 781,
+      "response_length_words": 154
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 926,
+      "response_length_words": 166
+    },
+    {
+      "initial_answer": "140",
+      "final_answer": "140",
+      "gold_answer": "170",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 1089,
+      "response_length_words": 168
+    },
+    {
+      "initial_answer": "29",
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 770,
+      "response_length_words": 206
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 608,
+      "response_length_words": 124
+    },
+    {
+      "initial_answer": "12",
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1134,
+      "response_length_words": 196
+    },
+    {
+      "initial_answer": "310",
+      "final_answer": "310",
+      "gold_answer": "310",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1330,
+      "response_length_words": 241
+    },
+    {
+      "initial_answer": "230",
+      "final_answer": "230",
+      "gold_answer": "230",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 807,
+      "response_length_words": 161
+    },
+    {
+      "initial_answer": "650",
+      "final_answer": "650",
+      "gold_answer": "650",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1307,
+      "response_length_words": 425
+    },
+    {
+      "initial_answer": "75",
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 825,
+      "response_length_words": 153
+    },
+    {
+      "initial_answer": "7.00",
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 973,
+      "response_length_words": 139
+    },
+    {
+      "initial_answer": "1200",
+      "final_answer": "1200",
+      "gold_answer": "1600",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 2234,
+      "response_length_words": 469
+    },
+    {
+      "initial_answer": "90",
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1170,
+      "response_length_words": 280
+    },
+    {
+      "initial_answer": "18",
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 802,
+      "response_length_words": 161
+    },
+    {
+      "initial_answer": "2400",
+      "final_answer": "2400",
+      "gold_answer": "2400",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1102,
+      "response_length_words": 216
+    },
+    {
+      "initial_answer": "7000",
+      "final_answer": "7000",
+      "gold_answer": "7000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1181,
+      "response_length_words": 222
+    },
+    {
+      "initial_answer": "320",
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1048,
+      "response_length_words": 181
+    },
+    {
+      "initial_answer": "15",
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 611,
+      "response_length_words": 135
+    },
+    {
+      "initial_answer": "28",
+      "final_answer": "28",
+      "gold_answer": "28",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 718,
+      "response_length_words": 145
+    },
+    {
+      "initial_answer": "68",
+      "final_answer": "68",
+      "gold_answer": "68",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1618,
+      "response_length_words": 303
+    },
+    {
+      "initial_answer": "130000",
+      "final_answer": "130000",
+      "gold_answer": "130000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 743,
+      "response_length_words": 132
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 927,
+      "response_length_words": 157
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1311,
+      "response_length_words": 235
+    },
+    {
+      "initial_answer": "3",
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 647,
+      "response_length_words": 123
+    },
+    {
+      "initial_answer": "180",
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 731,
+      "response_length_words": 129
+    },
+    {
+      "initial_answer": "120000",
+      "final_answer": "120000",
+      "gold_answer": "120000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1604,
+      "response_length_words": 310
+    },
+    {
+      "initial_answer": "1218",
+      "final_answer": "1218",
+      "gold_answer": "1218",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 752,
+      "response_length_words": 132
+    },
+    {
+      "initial_answer": "31",
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1041,
+      "response_length_words": 180
+    },
+    {
+      "initial_answer": "10",
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 752,
+      "response_length_words": 143
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 697,
+      "response_length_words": 109
+    },
+    {
+      "initial_answer": "100",
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 785,
+      "response_length_words": 169
+    },
+    {
+      "initial_answer": "17",
+      "final_answer": "17",
+      "gold_answer": "17",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 764,
+      "response_length_words": 132
+    },
+    {
+      "initial_answer": "32",
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 799,
+      "response_length_words": 155
+    },
+    {
+      "initial_answer": "40",
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 807,
+      "response_length_words": 148
+    },
+    {
+      "initial_answer": "2.00",
+      "final_answer": "2.00",
+      "gold_answer": "2",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 923,
+      "response_length_words": 157
+    },
+    {
+      "initial_answer": "90000",
+      "final_answer": "90000",
+      "gold_answer": "90000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 801,
+      "response_length_words": 155
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1301,
+      "response_length_words": 207
+    },
+    {
+      "initial_answer": "8",
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 596,
+      "response_length_words": 115
+    },
+    {
+      "initial_answer": "14",
+      "final_answer": "14",
+      "gold_answer": "21",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 819,
+      "response_length_words": 207
+    },
+    {
+      "initial_answer": "2",
+      "final_answer": "2",
+      "gold_answer": "2",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 800,
+      "response_length_words": 144
+    },
+    {
+      "initial_answer": "180",
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1037,
+      "response_length_words": 204
+    },
+    {
+      "initial_answer": "104",
+      "final_answer": "104",
+      "gold_answer": "104",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1486,
+      "response_length_words": 326
+    },
+    {
+      "initial_answer": "25",
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 905,
+      "response_length_words": 176
+    },
+    {
+      "initial_answer": "75",
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1181,
+      "response_length_words": 206
+    },
+    {
+      "initial_answer": "60",
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 638,
+      "response_length_words": 133
+    },
+    {
+      "initial_answer": "260",
+      "final_answer": "260",
+      "gold_answer": "260",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 860,
+      "response_length_words": 181
+    },
+    {
+      "initial_answer": "35",
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 887,
+      "response_length_words": 213
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 862,
+      "response_length_words": 200
+    },
+    {
+      "initial_answer": "18",
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 565,
+      "response_length_words": 112
+    },
+    {
+      "initial_answer": "160",
+      "final_answer": "160",
+      "gold_answer": "160",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 831,
+      "response_length_words": 166
+    },
+    {
+      "initial_answer": "15",
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 593,
+      "response_length_words": 116
+    },
+    {
+      "initial_answer": "7",
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 619,
+      "response_length_words": 126
+    },
+    {
+      "initial_answer": "1450000",
+      "final_answer": "1450000",
+      "gold_answer": "1450000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1335,
+      "response_length_words": 231
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 651,
+      "response_length_words": 125
+    },
+    {
+      "initial_answer": "490",
+      "final_answer": "490",
+      "gold_answer": "490",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 622,
+      "response_length_words": 129
+    },
+    {
+      "initial_answer": "31",
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 935,
+      "response_length_words": 169
+    },
+    {
+      "initial_answer": "24",
+      "final_answer": "24",
+      "gold_answer": "24",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1211,
+      "response_length_words": 418
+    },
+    {
+      "initial_answer": "131250",
+      "final_answer": "131250",
+      "gold_answer": "131250",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1537,
+      "response_length_words": 271
+    },
+    {
+      "initial_answer": "3",
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 619,
+      "response_length_words": 128
+    },
+    {
+      "initial_answer": "90",
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 949,
+      "response_length_words": 183
+    },
+    {
+      "initial_answer": "193",
+      "final_answer": "193",
+      "gold_answer": "193",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 749,
+      "response_length_words": 126
+    },
+    {
+      "initial_answer": "1",
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1186,
+      "response_length_words": 247
+    },
+    {
+      "initial_answer": "18",
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1471,
+      "response_length_words": 245
+    },
+    {
+      "initial_answer": "21",
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1014,
+      "response_length_words": 195
+    }
+  ],
+  "step_verification": [
+    {
+      "initial_answer": "2180",
+      "final_answer": "2180",
+      "gold_answer": "2280",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 792,
+      "response_length_words": 114
+    },
+    {
+      "initial_answer": "1",
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 773,
+      "response_length_words": 115
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 649,
+      "response_length_words": 104
+    },
+    {
+      "initial_answer": "12",
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 769,
+      "response_length_words": 107
+    },
+    {
+      "initial_answer": "273",
+      "final_answer": "273",
+      "gold_answer": "273",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 845,
+      "response_length_words": 92
+    },
+    {
+      "initial_answer": "45",
+      "final_answer": "45",
+      "gold_answer": "45",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 798,
+      "response_length_words": 112
+    },
+    {
+      "initial_answer": "21",
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 474,
+      "response_length_words": 65
+    },
+    {
+      "initial_answer": "70",
+      "final_answer": "70",
+      "gold_answer": "145",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 808,
+      "response_length_words": 114
+    },
+    {
+      "initial_answer": "60",
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 572,
+      "response_length_words": 73
+    },
+    {
+      "initial_answer": "122",
+      "final_answer": "122",
+      "gold_answer": "122",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 768,
+      "response_length_words": 96
+    },
+    {
+      "initial_answer": "29",
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1006,
+      "response_length_words": 110
+    },
+    {
+      "initial_answer": "80",
+      "final_answer": "80",
+      "gold_answer": "80",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 793,
+      "response_length_words": 111
+    },
+    {
+      "initial_answer": "36",
+      "final_answer": "36",
+      "gold_answer": "36",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 769,
+      "response_length_words": 128
+    },
+    {
+      "initial_answer": "1430",
+      "final_answer": "1430",
+      "gold_answer": "1430",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 660,
+      "response_length_words": 86
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 529,
+      "response_length_words": 74
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 629,
+      "response_length_words": 65
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 569,
+      "response_length_words": 83
+    },
+    {
+      "initial_answer": "66",
+      "final_answer": "66",
+      "gold_answer": "66",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 572,
+      "response_length_words": 92
+    },
+    {
+      "initial_answer": "15",
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 602,
+      "response_length_words": 81
+    },
+    {
+      "initial_answer": "40",
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 687,
+      "response_length_words": 76
+    },
+    {
+      "initial_answer": "93",
+      "final_answer": "93",
+      "gold_answer": "93",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 646,
+      "response_length_words": 86
+    },
+    {
+      "initial_answer": "2000",
+      "final_answer": "2000",
+      "gold_answer": "2000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1413,
+      "response_length_words": 169
+    },
+    {
+      "initial_answer": "1520",
+      "final_answer": "1520",
+      "gold_answer": "1520",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 748,
+      "response_length_words": 92
+    },
+    {
+      "initial_answer": "11050",
+      "final_answer": "11050",
+      "gold_answer": "11050",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 781,
+      "response_length_words": 101
+    },
+    {
+      "initial_answer": "90",
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 882,
+      "response_length_words": 107
+    },
+    {
+      "initial_answer": "40000",
+      "final_answer": "40000",
+      "gold_answer": "40000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 770,
+      "response_length_words": 105
+    },
+    {
+      "initial_answer": "21",
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 548,
+      "response_length_words": 54
+    },
+    {
+      "initial_answer": "18",
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1290,
+      "response_length_words": 177
+    },
+    {
+      "initial_answer": "14",
+      "final_answer": "14",
+      "gold_answer": "14",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 924,
+      "response_length_words": 163
+    },
+    {
+      "initial_answer": "23",
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 677,
+      "response_length_words": 93
+    },
+    {
+      "initial_answer": "145",
+      "final_answer": "145",
+      "gold_answer": "145",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1317,
+      "response_length_words": 170
+    },
+    {
+      "initial_answer": "123",
+      "final_answer": "123",
+      "gold_answer": "123",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 808,
+      "response_length_words": 99
+    },
+    {
+      "initial_answer": "98",
+      "final_answer": "98",
+      "gold_answer": "98",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 675,
+      "response_length_words": 96
+    },
+    {
+      "initial_answer": "7.00",
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 989,
+      "response_length_words": 108
+    },
+    {
+      "initial_answer": "34",
+      "final_answer": "34",
+      "gold_answer": "34",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 851,
+      "response_length_words": 106
+    },
+    {
+      "initial_answer": "38.00",
+      "final_answer": "38.00",
+      "gold_answer": "38",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 803,
+      "response_length_words": 81
+    },
+    {
+      "initial_answer": "320",
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 875,
+      "response_length_words": 111
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 780,
+      "response_length_words": 123
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 650,
+      "response_length_words": 87
+    },
+    {
+      "initial_answer": "84",
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 820,
+      "response_length_words": 128
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 974,
+      "response_length_words": 144
+    },
+    {
+      "initial_answer": "8000",
+      "final_answer": "8000",
+      "gold_answer": "8000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 597,
+      "response_length_words": 70
+    },
+    {
+      "initial_answer": "280",
+      "final_answer": "280",
+      "gold_answer": "280",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 598,
+      "response_length_words": 79
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 740,
+      "response_length_words": 83
+    },
+    {
+      "initial_answer": "176",
+      "final_answer": "176",
+      "gold_answer": "192",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 886,
+      "response_length_words": 166
+    },
+    {
+      "initial_answer": "276",
+      "final_answer": "276",
+      "gold_answer": "276",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 782,
+      "response_length_words": 110
+    },
+    {
+      "initial_answer": "32",
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 911,
+      "response_length_words": 111
+    },
+    {
+      "initial_answer": "25",
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 901,
+      "response_length_words": 112
+    },
+    {
+      "initial_answer": "10",
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 619,
+      "response_length_words": 77
+    },
+    {
+      "initial_answer": "84",
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 950,
+      "response_length_words": 141
+    },
+    {
+      "initial_answer": "147",
+      "final_answer": "147",
+      "gold_answer": "147",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 850,
+      "response_length_words": 147
+    },
+    {
+      "initial_answer": "25",
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 947,
+      "response_length_words": 157
+    },
+    {
+      "initial_answer": "1800",
+      "final_answer": "1800",
+      "gold_answer": "1800",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 704,
+      "response_length_words": 98
+    },
+    {
+      "initial_answer": "20",
+      "final_answer": "20",
+      "gold_answer": "20",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 750,
+      "response_length_words": 108
+    },
+    {
+      "initial_answer": "140",
+      "final_answer": "140",
+      "gold_answer": "140",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 541,
+      "response_length_words": 73
+    },
+    {
+      "initial_answer": "36.36",
+      "final_answer": "36.36",
+      "gold_answer": "36",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 1120,
+      "response_length_words": 130
+    },
+    {
+      "initial_answer": "1.00",
+      "final_answer": "1.00",
+      "gold_answer": "1",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 958,
+      "response_length_words": 140
+    },
+    {
+      "initial_answer": "1",
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 701,
+      "response_length_words": 86
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 901,
+      "response_length_words": 137
+    },
+    {
+      "initial_answer": "860",
+      "final_answer": "860",
+      "gold_answer": "860",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1021,
+      "response_length_words": 170
+    },
+    {
+      "initial_answer": "60",
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 852,
+      "response_length_words": 120
+    },
+    {
+      "initial_answer": "23",
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1104,
+      "response_length_words": 157
+    },
+    {
+      "initial_answer": "350",
+      "final_answer": "350",
+      "gold_answer": "350",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 780,
+      "response_length_words": 109
+    },
+    {
+      "initial_answer": "100",
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 820,
+      "response_length_words": 91
+    },
+    {
+      "initial_answer": "133",
+      "final_answer": "133",
+      "gold_answer": "133",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 467,
+      "response_length_words": 54
+    },
+    {
+      "initial_answer": "112",
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1109,
+      "response_length_words": 140
+    },
+    {
+      "initial_answer": "13",
+      "final_answer": "13",
+      "gold_answer": "13",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 682,
+      "response_length_words": 107
+    },
+    {
+      "initial_answer": "130",
+      "final_answer": "130",
+      "gold_answer": "130",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 832,
+      "response_length_words": 131
+    },
+    {
+      "initial_answer": "2125",
+      "final_answer": "2125",
+      "gold_answer": "2125",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 897,
+      "response_length_words": 120
+    },
+    {
+      "initial_answer": "7",
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 837,
+      "response_length_words": 110
+    },
+    {
+      "initial_answer": "120",
+      "final_answer": "120",
+      "gold_answer": "120",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 672,
+      "response_length_words": 100
+    },
+    {
+      "initial_answer": "8",
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 735,
+      "response_length_words": 92
+    },
+    {
+      "initial_answer": "144",
+      "final_answer": "144",
+      "gold_answer": "144",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 956,
+      "response_length_words": 163
+    },
+    {
+      "initial_answer": "6",
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 677,
+      "response_length_words": 92
+    },
+    {
+      "initial_answer": "450",
+      "final_answer": "450",
+      "gold_answer": "450",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 615,
+      "response_length_words": 83
+    },
+    {
+      "initial_answer": "4400",
+      "final_answer": "4400",
+      "gold_answer": "4400",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1247,
+      "response_length_words": 184
+    },
+    {
+      "initial_answer": "450",
+      "final_answer": "450",
+      "gold_answer": "450",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 821,
+      "response_length_words": 110
+    },
+    {
+      "initial_answer": "64",
+      "final_answer": "64",
+      "gold_answer": "64",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1691,
+      "response_length_words": 253
+    },
+    {
+      "initial_answer": "27",
+      "final_answer": "27",
+      "gold_answer": "27",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1019,
+      "response_length_words": 117
+    },
+    {
+      "initial_answer": "112",
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 565,
+      "response_length_words": 67
+    },
+    {
+      "initial_answer": "32",
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 694,
+      "response_length_words": 87
+    },
+    {
+      "initial_answer": "6",
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1191,
+      "response_length_words": 179
+    },
+    {
+      "initial_answer": "4",
+      "final_answer": "4",
+      "gold_answer": "4",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 564,
+      "response_length_words": 67
+    },
+    {
+      "initial_answer": "79",
+      "final_answer": "79",
+      "gold_answer": "79",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 608,
+      "response_length_words": 88
+    },
+    {
+      "initial_answer": "35",
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 864,
+      "response_length_words": 102
+    },
+    {
+      "initial_answer": "100",
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 571,
+      "response_length_words": 96
+    },
+    {
+      "initial_answer": "40",
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 660,
+      "response_length_words": 92
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 759,
+      "response_length_words": 76
+    },
+    {
+      "initial_answer": "140",
+      "final_answer": "140",
+      "gold_answer": "170",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 1062,
+      "response_length_words": 173
+    },
+    {
+      "initial_answer": "29",
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 543,
+      "response_length_words": 77
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 486,
+      "response_length_words": 54
+    },
+    {
+      "initial_answer": "12",
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1061,
+      "response_length_words": 176
+    },
+    {
+      "initial_answer": "310",
+      "final_answer": "310",
+      "gold_answer": "310",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1227,
+      "response_length_words": 185
+    },
+    {
+      "initial_answer": "230",
+      "final_answer": "230",
+      "gold_answer": "230",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 684,
+      "response_length_words": 89
+    },
+    {
+      "initial_answer": "650",
+      "final_answer": "650",
+      "gold_answer": "650",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 891,
+      "response_length_words": 131
+    },
+    {
+      "initial_answer": "75",
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 721,
+      "response_length_words": 95
+    },
+    {
+      "initial_answer": "7.00",
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 884,
+      "response_length_words": 91
+    },
+    {
+      "initial_answer": "1200",
+      "final_answer": "1200",
+      "gold_answer": "1600",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 1871,
+      "response_length_words": 254
+    },
+    {
+      "initial_answer": "90",
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 923,
+      "response_length_words": 128
+    },
+    {
+      "initial_answer": "18",
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 663,
+      "response_length_words": 78
+    },
+    {
+      "initial_answer": "2400",
+      "final_answer": "2400",
+      "gold_answer": "2400",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 965,
+      "response_length_words": 143
+    },
+    {
+      "initial_answer": "7000",
+      "final_answer": "7000",
+      "gold_answer": "7000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 965,
+      "response_length_words": 105
+    },
+    {
+      "initial_answer": "320",
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 909,
+      "response_length_words": 119
+    },
+    {
+      "initial_answer": "15",
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 498,
+      "response_length_words": 69
+    },
+    {
+      "initial_answer": "28",
+      "final_answer": "28",
+      "gold_answer": "28",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 600,
+      "response_length_words": 82
+    },
+    {
+      "initial_answer": "68",
+      "final_answer": "68",
+      "gold_answer": "68",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1469,
+      "response_length_words": 221
+    },
+    {
+      "initial_answer": "130000",
+      "final_answer": "130000",
+      "gold_answer": "130000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 639,
+      "response_length_words": 77
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 819,
+      "response_length_words": 91
+    },
+    {
+      "initial_answer": "5",
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1165,
+      "response_length_words": 184
+    },
+    {
+      "initial_answer": "3",
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 542,
+      "response_length_words": 68
+    },
+    {
+      "initial_answer": "180",
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 635,
+      "response_length_words": 80
+    },
+    {
+      "initial_answer": "120000",
+      "final_answer": "120000",
+      "gold_answer": "120000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1536,
+      "response_length_words": 263
+    },
+    {
+      "initial_answer": "1218",
+      "final_answer": "1218",
+      "gold_answer": "1218",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 669,
+      "response_length_words": 98
+    },
+    {
+      "initial_answer": "31",
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 935,
+      "response_length_words": 126
+    },
+    {
+      "initial_answer": "10",
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 622,
+      "response_length_words": 75
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 620,
+      "response_length_words": 77
+    },
+    {
+      "initial_answer": "100",
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 674,
+      "response_length_words": 106
+    },
+    {
+      "initial_answer": "17",
+      "final_answer": "17",
+      "gold_answer": "17",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 721,
+      "response_length_words": 116
+    },
+    {
+      "initial_answer": "32",
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 692,
+      "response_length_words": 95
+    },
+    {
+      "initial_answer": "40",
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 709,
+      "response_length_words": 93
+    },
+    {
+      "initial_answer": "2.00",
+      "final_answer": "2.00",
+      "gold_answer": "2",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 814,
+      "response_length_words": 114
+    },
+    {
+      "initial_answer": "90000",
+      "final_answer": "90000",
+      "gold_answer": "90000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 700,
+      "response_length_words": 99
+    },
+    {
+      "initial_answer": "50",
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1223,
+      "response_length_words": 141
+    },
+    {
+      "initial_answer": "8",
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 500,
+      "response_length_words": 66
+    },
+    {
+      "initial_answer": "14",
+      "final_answer": "14",
+      "gold_answer": "21",
+      "correct": false,
+      "initial_correct": false,
+      "answer_changed": false,
+      "total_tokens": 633,
+      "response_length_words": 93
+    },
+    {
+      "initial_answer": "2",
+      "final_answer": "2",
+      "gold_answer": "2",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 712,
+      "response_length_words": 100
+    },
+    {
+      "initial_answer": "180",
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 827,
+      "response_length_words": 105
+    },
+    {
+      "initial_answer": "104",
+      "final_answer": "104",
+      "gold_answer": "104",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1259,
+      "response_length_words": 189
+    },
+    {
+      "initial_answer": "25",
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 792,
+      "response_length_words": 120
+    },
+    {
+      "initial_answer": "75",
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1068,
+      "response_length_words": 155
+    },
+    {
+      "initial_answer": "60",
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 561,
+      "response_length_words": 98
+    },
+    {
+      "initial_answer": "260",
+      "final_answer": "260",
+      "gold_answer": "260",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 742,
+      "response_length_words": 124
+    },
+    {
+      "initial_answer": "35",
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 689,
+      "response_length_words": 89
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 671,
+      "response_length_words": 87
+    },
+    {
+      "initial_answer": "18",
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 467,
+      "response_length_words": 62
+    },
+    {
+      "initial_answer": "160",
+      "final_answer": "160",
+      "gold_answer": "160",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 722,
+      "response_length_words": 113
+    },
+    {
+      "initial_answer": "15",
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 485,
+      "response_length_words": 57
+    },
+    {
+      "initial_answer": "7",
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 498,
+      "response_length_words": 56
+    },
+    {
+      "initial_answer": "1450000",
+      "final_answer": "1450000",
+      "gold_answer": "1450000",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1239,
+      "response_length_words": 156
+    },
+    {
+      "initial_answer": "30",
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 554,
+      "response_length_words": 76
+    },
+    {
+      "initial_answer": "490",
+      "final_answer": "490",
+      "gold_answer": "490",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 525,
+      "response_length_words": 70
+    },
+    {
+      "initial_answer": "31",
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 836,
+      "response_length_words": 126
+    },
+    {
+      "initial_answer": "24",
+      "final_answer": "24",
+      "gold_answer": "24",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 736,
+      "response_length_words": 108
+    },
+    {
+      "initial_answer": "131250",
+      "final_answer": "131250",
+      "gold_answer": "131250",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1345,
+      "response_length_words": 147
+    },
+    {
+      "initial_answer": "3",
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 529,
+      "response_length_words": 88
+    },
+    {
+      "initial_answer": "90",
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 835,
+      "response_length_words": 122
+    },
+    {
+      "initial_answer": "193",
+      "final_answer": "193",
+      "gold_answer": "193",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 700,
+      "response_length_words": 110
+    },
+    {
+      "initial_answer": "1",
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 951,
+      "response_length_words": 124
+    },
+    {
+      "initial_answer": "18",
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 1368,
+      "response_length_words": 200
+    },
+    {
+      "initial_answer": "21",
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "initial_correct": true,
+      "answer_changed": false,
+      "total_tokens": 861,
+      "response_length_words": 102
+    }
+  ],
+  "self_consistency_5": [
+    {
+      "all_answers": [
+        "2180",
+        "2180",
+        "2180",
+        "2180",
+        "2180"
+      ],
+      "final_answer": "2180",
+      "gold_answer": "2280",
+      "correct": false,
+      "total_tokens": 1296,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 1427,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ],
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 1214,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "12",
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "total_tokens": 1346,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "273",
+        "273",
+        "273",
+        "273",
+        "273"
+      ],
+      "final_answer": "273",
+      "gold_answer": "273",
+      "correct": true,
+      "total_tokens": 1508,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "45",
+        "45",
+        "45",
+        "45",
+        "45"
+      ],
+      "final_answer": "45",
+      "gold_answer": "45",
+      "correct": true,
+      "total_tokens": 1418,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "21",
+        "21",
+        "21",
+        "21",
+        "21"
+      ],
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "total_tokens": 776,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "70",
+        "70",
+        "145",
+        "145",
+        "70"
+      ],
+      "final_answer": "70",
+      "gold_answer": "145",
+      "correct": false,
+      "total_tokens": 1541,
+      "agreement_rate": 0.6
+    },
+    {
+      "all_answers": [
+        "60",
+        "60",
+        "60",
+        "60",
+        "60"
+      ],
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "total_tokens": 965,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "122",
+        "122",
+        "122",
+        "122",
+        "122"
+      ],
+      "final_answer": "122",
+      "gold_answer": "122",
+      "correct": true,
+      "total_tokens": 1358,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "29",
+        "29",
+        "29",
+        "29",
+        "29"
+      ],
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "total_tokens": 1894,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "final_answer": "80",
+      "gold_answer": "80",
+      "correct": true,
+      "total_tokens": 1395,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "36",
+        "36",
+        "36",
+        "36",
+        "36"
+      ],
+      "final_answer": "36",
+      "gold_answer": "36",
+      "correct": true,
+      "total_tokens": 1288,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "1430",
+        "1430",
+        "1430",
+        "1430",
+        "1430"
+      ],
+      "final_answer": "1430",
+      "gold_answer": "1430",
+      "correct": true,
+      "total_tokens": 1146,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ],
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 914,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ],
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 1128,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ],
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 953,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "66",
+        "66",
+        "66",
+        "66",
+        "66"
+      ],
+      "final_answer": "66",
+      "gold_answer": "66",
+      "correct": true,
+      "total_tokens": 939,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "15",
+        "15",
+        "15",
+        "15",
+        "15"
+      ],
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "total_tokens": 1006,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "40",
+        "40",
+        "40",
+        "40",
+        "40"
+      ],
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "total_tokens": 1331,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "93",
+        "93",
+        "93",
+        "93",
+        "93"
+      ],
+      "final_answer": "93",
+      "gold_answer": "93",
+      "correct": true,
+      "total_tokens": 1038,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "2000",
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "final_answer": "2000",
+      "gold_answer": "2000",
+      "correct": true,
+      "total_tokens": 2105,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "1520",
+        "1520",
+        "1520",
+        "1520",
+        "1520"
+      ],
+      "final_answer": "1520",
+      "gold_answer": "1520",
+      "correct": true,
+      "total_tokens": 1289,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "11050",
+        "11050",
+        "11050",
+        "11050",
+        "11050"
+      ],
+      "final_answer": "11050",
+      "gold_answer": "11050",
+      "correct": true,
+      "total_tokens": 1425,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "90",
+        "90",
+        "90",
+        "90",
+        "90"
+      ],
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "total_tokens": 1777,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "40000",
+        "40000",
+        "40000",
+        "40000",
+        "40000"
+      ],
+      "final_answer": "40000",
+      "gold_answer": "40000",
+      "correct": true,
+      "total_tokens": 1289,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "21",
+        "21",
+        "21",
+        "21",
+        "21"
+      ],
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "total_tokens": 988,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "18",
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 2619,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "14",
+        "14",
+        "14",
+        "14",
+        "14"
+      ],
+      "final_answer": "14",
+      "gold_answer": "14",
+      "correct": true,
+      "total_tokens": 1694,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "23",
+        "23",
+        "23",
+        "23",
+        "23"
+      ],
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "total_tokens": 1413,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "145",
+        "145",
+        "145",
+        "145",
+        "145"
+      ],
+      "final_answer": "145",
+      "gold_answer": "145",
+      "correct": true,
+      "total_tokens": 2068,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "123",
+        "123",
+        "123",
+        "123",
+        "123"
+      ],
+      "final_answer": "123",
+      "gold_answer": "123",
+      "correct": true,
+      "total_tokens": 1200,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "98",
+        "98",
+        "98",
+        "98",
+        "98"
+      ],
+      "final_answer": "98",
+      "gold_answer": "98",
+      "correct": true,
+      "total_tokens": 1191,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "7.00",
+        "7.00",
+        "7.00",
+        "7.00",
+        "7.00"
+      ],
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 2049,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "34",
+        "34",
+        "34",
+        "34",
+        "34"
+      ],
+      "final_answer": "34",
+      "gold_answer": "34",
+      "correct": true,
+      "total_tokens": 1553,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "38",
+        "38",
+        "38",
+        "38.00",
+        "38.00"
+      ],
+      "final_answer": "38",
+      "gold_answer": "38",
+      "correct": true,
+      "total_tokens": 1573,
+      "agreement_rate": 0.6
+    },
+    {
+      "all_answers": [
+        "320",
+        "320",
+        "320",
+        "320",
+        "320"
+      ],
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "total_tokens": 1742,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "50",
+        "50",
+        "50",
+        "50",
+        "50"
+      ],
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 1427,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "50",
+        "50",
+        "50",
+        "50",
+        "50"
+      ],
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 1183,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "84",
+        "84",
+        "84",
+        "84",
+        "84"
+      ],
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "total_tokens": 1453,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "50",
+        "50",
+        "50",
+        "50",
+        "50"
+      ],
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 1795,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "8000",
+        "8000",
+        "8000",
+        "8000",
+        "8000"
+      ],
+      "final_answer": "8000",
+      "gold_answer": "8000",
+      "correct": true,
+      "total_tokens": 999,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "280",
+        "280",
+        "280",
+        "280",
+        "280"
+      ],
+      "final_answer": "280",
+      "gold_answer": "280",
+      "correct": true,
+      "total_tokens": 1093,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "30",
+        "30",
+        "30",
+        "30",
+        "30"
+      ],
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 1170,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "176",
+        "176",
+        "176",
+        "176",
+        "176"
+      ],
+      "final_answer": "176",
+      "gold_answer": "192",
+      "correct": false,
+      "total_tokens": 1436,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "276",
+        "276",
+        "276",
+        "276",
+        "276"
+      ],
+      "final_answer": "276",
+      "gold_answer": "276",
+      "correct": true,
+      "total_tokens": 1399,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "32",
+        "32",
+        "32",
+        "32",
+        "32"
+      ],
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "total_tokens": 1610,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "25",
+        "25",
+        "25",
+        "25",
+        "25"
+      ],
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "total_tokens": 1637,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "10",
+        "10",
+        "10",
+        "10",
+        "10"
+      ],
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "total_tokens": 1111,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "84",
+        "84",
+        "84",
+        "84",
+        "84"
+      ],
+      "final_answer": "84",
+      "gold_answer": "84",
+      "correct": true,
+      "total_tokens": 1398,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "147",
+        "147",
+        "147",
+        "147",
+        "147"
+      ],
+      "final_answer": "147",
+      "gold_answer": "147",
+      "correct": true,
+      "total_tokens": 1396,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "25",
+        "25",
+        "25",
+        "25",
+        "25"
+      ],
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "total_tokens": 1681,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "1800",
+        "1800",
+        "1800",
+        "1800",
+        "1800"
+      ],
+      "final_answer": "1800",
+      "gold_answer": "1800",
+      "correct": true,
+      "total_tokens": 1090,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "20",
+        "20",
+        "20",
+        "20",
+        "20"
+      ],
+      "final_answer": "20",
+      "gold_answer": "20",
+      "correct": true,
+      "total_tokens": 1338,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "140",
+        "140",
+        "140",
+        "140",
+        "140"
+      ],
+      "final_answer": "140",
+      "gold_answer": "140",
+      "correct": true,
+      "total_tokens": 1108,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "36.36",
+        "36.36",
+        "36.36",
+        "36.36",
+        "36.36"
+      ],
+      "final_answer": "36.36",
+      "gold_answer": "36",
+      "correct": false,
+      "total_tokens": 1986,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "1",
+        "1.00",
+        "1",
+        "1.00",
+        "1"
+      ],
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 1638,
+      "agreement_rate": 0.6
+    },
+    {
+      "all_answers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 1295,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "50",
+        "50",
+        "50",
+        "50",
+        "50"
+      ],
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 1679,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "860",
+        "860",
+        "860",
+        "860",
+        "860"
+      ],
+      "final_answer": "860",
+      "gold_answer": "860",
+      "correct": true,
+      "total_tokens": 1670,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "60",
+        "60",
+        "60",
+        "60",
+        "60"
+      ],
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "total_tokens": 1534,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "23",
+        "23",
+        "23",
+        "23",
+        "23"
+      ],
+      "final_answer": "23",
+      "gold_answer": "23",
+      "correct": true,
+      "total_tokens": 1965,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "350",
+        "350",
+        "350",
+        "350",
+        "350"
+      ],
+      "final_answer": "350",
+      "gold_answer": "350",
+      "correct": true,
+      "total_tokens": 1344,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "100",
+        "100",
+        "100",
+        "100",
+        "100"
+      ],
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "total_tokens": 1484,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "133",
+        "133",
+        "133",
+        "133",
+        "133"
+      ],
+      "final_answer": "133",
+      "gold_answer": "133",
+      "correct": true,
+      "total_tokens": 810,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "112",
+        "112",
+        "112",
+        "112",
+        "112"
+      ],
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "total_tokens": 2081,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "13",
+        "13",
+        "13",
+        "13",
+        "13"
+      ],
+      "final_answer": "13",
+      "gold_answer": "13",
+      "correct": true,
+      "total_tokens": 1157,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "130",
+        "130",
+        "130",
+        "130",
+        "130"
+      ],
+      "final_answer": "130",
+      "gold_answer": "130",
+      "correct": true,
+      "total_tokens": 1380,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "2125",
+        "2125",
+        "2125",
+        "2125",
+        "2125"
+      ],
+      "final_answer": "2125",
+      "gold_answer": "2125",
+      "correct": true,
+      "total_tokens": 1500,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "7",
+        "7",
+        "7",
+        "7",
+        "7"
+      ],
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 1463,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "120",
+        "120",
+        "120",
+        "120",
+        "120"
+      ],
+      "final_answer": "120",
+      "gold_answer": "120",
+      "correct": true,
+      "total_tokens": 1316,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "8",
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "total_tokens": 1461,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "144",
+        "144",
+        "144",
+        "144",
+        "144"
+      ],
+      "final_answer": "144",
+      "gold_answer": "144",
+      "correct": true,
+      "total_tokens": 1718,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "6",
+        "6",
+        "6",
+        "6",
+        "6"
+      ],
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "total_tokens": 1202,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "450",
+        "450",
+        "450",
+        "450",
+        "450"
+      ],
+      "final_answer": "450",
+      "gold_answer": "450",
+      "correct": true,
+      "total_tokens": 1093,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "4400",
+        "4400",
+        "4400",
+        "4400",
+        "5"
+      ],
+      "final_answer": "4400",
+      "gold_answer": "4400",
+      "correct": true,
+      "total_tokens": 2410,
+      "agreement_rate": 0.8
+    },
+    {
+      "all_answers": [
+        "450",
+        "450",
+        "450",
+        "450",
+        "450"
+      ],
+      "final_answer": "450",
+      "gold_answer": "450",
+      "correct": true,
+      "total_tokens": 1552,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "64",
+        "64",
+        "64",
+        "64",
+        "64"
+      ],
+      "final_answer": "64",
+      "gold_answer": "64",
+      "correct": true,
+      "total_tokens": 2445,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "27",
+        "27",
+        "27",
+        "27",
+        "27"
+      ],
+      "final_answer": "27",
+      "gold_answer": "27",
+      "correct": true,
+      "total_tokens": 1718,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "112",
+        "112",
+        "112",
+        "112",
+        "112"
+      ],
+      "final_answer": "112",
+      "gold_answer": "112",
+      "correct": true,
+      "total_tokens": 1042,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "32",
+        "32",
+        "32",
+        "32",
+        "32"
+      ],
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "total_tokens": 1165,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "6",
+        "6",
+        "6",
+        "6",
+        "6"
+      ],
+      "final_answer": "6",
+      "gold_answer": "6",
+      "correct": true,
+      "total_tokens": 1980,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "4",
+        "4",
+        "4",
+        "4",
+        "4"
+      ],
+      "final_answer": "4",
+      "gold_answer": "4",
+      "correct": true,
+      "total_tokens": 1042,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "79",
+        "79",
+        "79",
+        "79",
+        "79"
+      ],
+      "final_answer": "79",
+      "gold_answer": "79",
+      "correct": true,
+      "total_tokens": 1004,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "35",
+        "35",
+        "35",
+        "35",
+        "35"
+      ],
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "total_tokens": 1314,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "100",
+        "100",
+        "100",
+        "100",
+        "100"
+      ],
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "total_tokens": 962,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "40",
+        "40",
+        "40",
+        "40",
+        "40"
+      ],
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "total_tokens": 1299,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "30",
+        "30",
+        "30",
+        "30",
+        "30"
+      ],
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 1403,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "140",
+        "140",
+        "140",
+        "140",
+        "140"
+      ],
+      "final_answer": "140",
+      "gold_answer": "170",
+      "correct": false,
+      "total_tokens": 1876,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "29",
+        "29",
+        "29",
+        "29",
+        "29"
+      ],
+      "final_answer": "29",
+      "gold_answer": "29",
+      "correct": true,
+      "total_tokens": 1100,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ],
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 873,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "12",
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "final_answer": "12",
+      "gold_answer": "12",
+      "correct": true,
+      "total_tokens": 1804,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "310",
+        "310",
+        "310",
+        "310",
+        "310"
+      ],
+      "final_answer": "310",
+      "gold_answer": "310",
+      "correct": true,
+      "total_tokens": 1962,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "230",
+        "230",
+        "230",
+        "230",
+        "230"
+      ],
+      "final_answer": "230",
+      "gold_answer": "230",
+      "correct": true,
+      "total_tokens": 1290,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "650",
+        "650",
+        "650",
+        "650",
+        "650"
+      ],
+      "final_answer": "650",
+      "gold_answer": "650",
+      "correct": true,
+      "total_tokens": 1686,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "75",
+        "75",
+        "75",
+        "75",
+        "75"
+      ],
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "total_tokens": 1282,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "7.00",
+        "7.00",
+        "7.00",
+        "7.00",
+        "7.00"
+      ],
+      "final_answer": "7.00",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 1468,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "1600",
+        "1200",
+        "1600",
+        "1200",
+        "1200"
+      ],
+      "final_answer": "1200",
+      "gold_answer": "1600",
+      "correct": false,
+      "total_tokens": 3714,
+      "agreement_rate": 0.6
+    },
+    {
+      "all_answers": [
+        "90",
+        "90",
+        "90",
+        "90",
+        "90"
+      ],
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "total_tokens": 1637,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "18",
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 1229,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "2400",
+        "2400",
+        "2400",
+        "2400",
+        "2400"
+      ],
+      "final_answer": "2400",
+      "gold_answer": "2400",
+      "correct": true,
+      "total_tokens": 1647,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "38.89",
+        "7000",
+        "7000",
+        "7000",
+        "7000"
+      ],
+      "final_answer": "7000",
+      "gold_answer": "7000",
+      "correct": true,
+      "total_tokens": 1925,
+      "agreement_rate": 0.8
+    },
+    {
+      "all_answers": [
+        "320",
+        "320",
+        "320",
+        "320",
+        "320"
+      ],
+      "final_answer": "320",
+      "gold_answer": "320",
+      "correct": true,
+      "total_tokens": 1818,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "15",
+        "15",
+        "15",
+        "15",
+        "15"
+      ],
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "total_tokens": 823,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "28",
+        "28",
+        "28",
+        "28",
+        "28"
+      ],
+      "final_answer": "28",
+      "gold_answer": "28",
+      "correct": true,
+      "total_tokens": 1051,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "68",
+        "68",
+        "68",
+        "68",
+        "68"
+      ],
+      "final_answer": "68",
+      "gold_answer": "68",
+      "correct": true,
+      "total_tokens": 3141,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "130000",
+        "130000",
+        "130000",
+        "130000",
+        "130000"
+      ],
+      "final_answer": "130000",
+      "gold_answer": "130000",
+      "correct": true,
+      "total_tokens": 1166,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ],
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 1421,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ],
+      "final_answer": "5",
+      "gold_answer": "5",
+      "correct": true,
+      "total_tokens": 2433,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "3",
+        "3",
+        "3",
+        "3",
+        "3"
+      ],
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "total_tokens": 938,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "180",
+        "180",
+        "180",
+        "180",
+        "180"
+      ],
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "total_tokens": 1166,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "120000",
+        "120000",
+        "120000",
+        "120000",
+        "120000"
+      ],
+      "final_answer": "120000",
+      "gold_answer": "120000",
+      "correct": true,
+      "total_tokens": 2740,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "1218",
+        "1218",
+        "1218",
+        "1218",
+        "1218"
+      ],
+      "final_answer": "1218",
+      "gold_answer": "1218",
+      "correct": true,
+      "total_tokens": 1152,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "31",
+        "31",
+        "31",
+        "31",
+        "31"
+      ],
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "total_tokens": 1637,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "10",
+        "10",
+        "10",
+        "10",
+        "10"
+      ],
+      "final_answer": "10",
+      "gold_answer": "10",
+      "correct": true,
+      "total_tokens": 1177,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "30",
+        "30",
+        "30",
+        "30",
+        "30"
+      ],
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 1140,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "100",
+        "100",
+        "100",
+        "100",
+        "100"
+      ],
+      "final_answer": "100",
+      "gold_answer": "100",
+      "correct": true,
+      "total_tokens": 1135,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "17",
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "final_answer": "17",
+      "gold_answer": "17",
+      "correct": true,
+      "total_tokens": 1223,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "32",
+        "32",
+        "32",
+        "32",
+        "32"
+      ],
+      "final_answer": "32",
+      "gold_answer": "32",
+      "correct": true,
+      "total_tokens": 1159,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "40",
+        "40",
+        "40",
+        "40",
+        "40"
+      ],
+      "final_answer": "40",
+      "gold_answer": "40",
+      "correct": true,
+      "total_tokens": 1182,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "2.00",
+        "2.00",
+        "2.00",
+        "2.00",
+        "2.00"
+      ],
+      "final_answer": "2.00",
+      "gold_answer": "2",
+      "correct": true,
+      "total_tokens": 1427,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "90000",
+        "90000",
+        "90000",
+        "90000",
+        "90000"
+      ],
+      "final_answer": "90000",
+      "gold_answer": "90000",
+      "correct": true,
+      "total_tokens": 1270,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "50",
+        "50",
+        "50",
+        "50",
+        "50"
+      ],
+      "final_answer": "50",
+      "gold_answer": "50",
+      "correct": true,
+      "total_tokens": 2369,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "8",
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "final_answer": "8",
+      "gold_answer": "8",
+      "correct": true,
+      "total_tokens": 856,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "14",
+        "14",
+        "21",
+        "14",
+        "21"
+      ],
+      "final_answer": "14",
+      "gold_answer": "21",
+      "correct": false,
+      "total_tokens": 1233,
+      "agreement_rate": 0.6
+    },
+    {
+      "all_answers": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "final_answer": "2",
+      "gold_answer": "2",
+      "correct": true,
+      "total_tokens": 1543,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "180",
+        "180",
+        "180",
+        "180",
+        "180"
+      ],
+      "final_answer": "180",
+      "gold_answer": "180",
+      "correct": true,
+      "total_tokens": 1322,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "104",
+        "104",
+        "104",
+        "104",
+        "104"
+      ],
+      "final_answer": "104",
+      "gold_answer": "104",
+      "correct": true,
+      "total_tokens": 2359,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "25",
+        "25",
+        "25",
+        "25",
+        "25"
+      ],
+      "final_answer": "25",
+      "gold_answer": "25",
+      "correct": true,
+      "total_tokens": 1366,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "75",
+        "75",
+        "75",
+        "75",
+        "75"
+      ],
+      "final_answer": "75",
+      "gold_answer": "75",
+      "correct": true,
+      "total_tokens": 1858,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "60",
+        "60",
+        "60",
+        "60",
+        "60"
+      ],
+      "final_answer": "60",
+      "gold_answer": "60",
+      "correct": true,
+      "total_tokens": 915,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "260",
+        "260",
+        "260",
+        "260",
+        "260"
+      ],
+      "final_answer": "260",
+      "gold_answer": "260",
+      "correct": true,
+      "total_tokens": 1366,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "35",
+        "35",
+        "35",
+        "35",
+        "35"
+      ],
+      "final_answer": "35",
+      "gold_answer": "35",
+      "correct": true,
+      "total_tokens": 1215,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "30",
+        "30",
+        "30",
+        "30",
+        "30"
+      ],
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 1261,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "18",
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 823,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "160",
+        "160",
+        "160",
+        "160",
+        "160"
+      ],
+      "final_answer": "160",
+      "gold_answer": "160",
+      "correct": true,
+      "total_tokens": 1288,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "15",
+        "15",
+        "15",
+        "15",
+        "15"
+      ],
+      "final_answer": "15",
+      "gold_answer": "15",
+      "correct": true,
+      "total_tokens": 855,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "7",
+        "7",
+        "7",
+        "7",
+        "7"
+      ],
+      "final_answer": "7",
+      "gold_answer": "7",
+      "correct": true,
+      "total_tokens": 1077,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "1450000",
+        "1450000",
+        "1450000",
+        "1450000",
+        "1450000"
+      ],
+      "final_answer": "1450000",
+      "gold_answer": "1450000",
+      "correct": true,
+      "total_tokens": 2012,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "30",
+        "30",
+        "30",
+        "30",
+        "30"
+      ],
+      "final_answer": "30",
+      "gold_answer": "30",
+      "correct": true,
+      "total_tokens": 952,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "490",
+        "490",
+        "490",
+        "490",
+        "490"
+      ],
+      "final_answer": "490",
+      "gold_answer": "490",
+      "correct": true,
+      "total_tokens": 926,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "31",
+        "31",
+        "31",
+        "31",
+        "31"
+      ],
+      "final_answer": "31",
+      "gold_answer": "31",
+      "correct": true,
+      "total_tokens": 1624,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "24",
+        "24",
+        "24",
+        "24",
+        "24"
+      ],
+      "final_answer": "24",
+      "gold_answer": "24",
+      "correct": true,
+      "total_tokens": 1426,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "131250",
+        "131250",
+        "131250",
+        "131250",
+        "131250"
+      ],
+      "final_answer": "131250",
+      "gold_answer": "131250",
+      "correct": true,
+      "total_tokens": 2317,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "3",
+        "3",
+        "3",
+        "3",
+        "3"
+      ],
+      "final_answer": "3",
+      "gold_answer": "3",
+      "correct": true,
+      "total_tokens": 878,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "90",
+        "90",
+        "90",
+        "90",
+        "90"
+      ],
+      "final_answer": "90",
+      "gold_answer": "90",
+      "correct": true,
+      "total_tokens": 1451,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "193",
+        "193",
+        "193",
+        "193",
+        "193"
+      ],
+      "final_answer": "193",
+      "gold_answer": "193",
+      "correct": true,
+      "total_tokens": 1199,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "final_answer": "1",
+      "gold_answer": "1",
+      "correct": true,
+      "total_tokens": 1664,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "18",
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "final_answer": "18",
+      "gold_answer": "18",
+      "correct": true,
+      "total_tokens": 2346,
+      "agreement_rate": 1.0
+    },
+    {
+      "all_answers": [
+        "21",
+        "21",
+        "21",
+        "21",
+        "21"
+      ],
+      "final_answer": "21",
+      "gold_answer": "21",
+      "correct": true,
+      "total_tokens": 1571,
+      "agreement_rate": 1.0
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+\section{Methodology}
+\label{sec:method}
+
+We design four experiments to test the effects of critique stringency, budget control, their interaction, and alternative effort-inducing strategies on LLM reasoning accuracy.
+
+\subsection{Benchmark and Model}
+
+\para{Benchmark.}
+We use \gsmk \citep{cobbe2021training}, a dataset of 1,319 grade-school math word problems with numerical answers.
+We select random subsets of 150--200 problems (seed=42) for each experiment.
+\gsmk provides unambiguous ground truth, enabling precise accuracy measurement, and is the most widely used benchmark in the self-correction literature \citep{madaan2023selfrefine,huang2024large,kamoi2024when,han2024token,nayab2024concise}.
+
+\para{Model.}
+We use \gptmini via the OpenAI API with temperature $T=0$ for deterministic outputs (except where noted for self-consistency).
+We extract answers using regex patterns for the \texttt{\#\#\#\# [number]} format, with fallback patterns for ``the answer is'' and \LaTeX{} \texttt{\textbackslash boxed\{\}} notation.
+Correctness is determined by numerical comparison with tolerance $10^{-6}$.
+
+\subsection{Experiment 1: Critique Stringency Spectrum}
+\label{sec:exp1}
+
+We test five levels of critique stringency using a generate-then-critique protocol on $n=200$ problems.
+\Tabref{tab:critique_levels} describes each level.
+For L0 (baseline), the model produces a single \chainofthought response.
+For L1--L4, the model first generates a solution, then receives the critique prompt along with its own solution and produces a revised answer.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lp{5.5cm}@{}}
+\toprule
+\textbf{Level} & \textbf{Critique Instruction} \\
+\midrule
+L0 (Baseline) & No critique; direct \chainofthought only \\
+L1 (Gentle) & ``Please briefly review your answer\ldots Check if there are any errors'' \\
+L2 (Moderate) & ``Carefully examine each step\ldots Identify any logical errors, calculation mistakes, or unjustified leaps'' \\
+L3 (Harsh) & ``You are an extremely strict math professor\ldots Find every flaw, no matter how small\ldots Assume there ARE errors'' \\
+L4 (Adversarial) & ``Your job is to DESTROY this solution\ldots This answer is probably wrong---prove it'' \\
+\bottomrule
+\end{tabular}
+\caption{Five levels of critique stringency used in Experiment~1. L0 serves as the no-critique baseline. L1--L4 implement increasingly aggressive self-evaluation instructions applied after an initial solution is generated.}
+\label{tab:critique_levels}
+\end{table}
+
+\subsection{Experiment 2: Budget Control}
+\label{sec:exp2}
+
+We test four budget levels with no self-critique on $n=150$ problems: no word limit, 300 words, 150 words, and 75 words.
+Budget instructions are appended to the standard \chainofthought prompt (\eg ``Keep your solution to at most 75 words.\ Be very concise---only essential steps.'').
+
+\subsection{Experiment 3: Critique $\times$ Budget Factorial}
+\label{sec:exp3}
+
+We use a $3 \times 3$ factorial design crossing three critique levels (none, moderate, harsh) with three budget levels (no limit, 150 words, 75 words), yielding nine conditions on $n=150$ problems.
+This design tests whether budget constraints interact with critique stringency.
+
+\subsection{Experiment 4: Alternative Effort-Inducing Strategies}
+\label{sec:exp4}
+
+We compare five strategies on $n=150$ problems:
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+\item \textbf{Baseline \ChainOfThought}: standard \chainofthought prompting.
+\item \textbf{High Stakes}: emotional urgency framing (``This is an extremely important exam that will determine your entire career\ldots'').
+\item \textbf{Explicit Rubric}: generate a solution, evaluate against a 4-criterion rubric, then revise.
+\item \textbf{Step Verification}: generate a solution, then re-solve the problem independently and reconcile.
+\item \textbf{Self-Consistency} ($k=5$): five samples at temperature $T=0.7$, majority vote.
+\end{itemize}
+
+\subsection{Statistical Analysis}
+
+We use McNemar's test with continuity correction for paired binary outcomes (correct/incorrect), as all conditions share the same problem set.
+We report Cohen's $h$ for effect size, 95\% Wilson score confidence intervals for proportions, and set significance at $\alpha = 0.05$.
+
+\subsection{Reproducibility}
+
+All API calls are cached by SHA-256 hash of request parameters, ensuring exact reproducibility.
+Code, data, and results are publicly available.\footnote{Repository details withheld for anonymous review.}

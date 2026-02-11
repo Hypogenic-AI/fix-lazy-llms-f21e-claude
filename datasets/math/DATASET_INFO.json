@@ -1,0 +1,17 @@
+{
+  "note": "MATH dataset requires authentication or direct download from https://github.com/hendrycks/math",
+  "dataset": "MATH (Measuring Massive Multitask Language Understanding - Mathematics)",
+  "source": "https://github.com/hendrycks/math",
+  "subjects": [
+    "algebra",
+    "counting_and_probability",
+    "geometry",
+    "intermediate_algebra",
+    "number_theory",
+    "prealgebra",
+    "precalculus"
+  ],
+  "total_problems": 12500,
+  "test_problems": 5000,
+  "download_instructions": "Visit https://github.com/hendrycks/math and follow the download instructions, or use: pip install datasets && python -c \"from datasets import load_dataset; ds = load_dataset('lighteval/MATH', 'all')\""
+}

@@ -1,0 +1,63 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Why Does Self-Critique Hurt?}
+
+Our results extend the findings of \citet{huang2024large} by showing that the degradation from self-critique is \emph{monotonically related to critique stringency}: the harsher the instruction, the worse the performance.
+The mechanism is asymmetric error introduction.
+At the adversarial level, the model changes 6.5\% of its answers.
+Of originally correct answers, 5.7\% are changed to incorrect, while only a small fraction of incorrect answers are fixed.
+Since the baseline is at 96\% accuracy, the base rate asymmetry---far more correct answers to damage than incorrect answers to fix---makes the net effect strongly negative.
+
+This connects to the key insight of \citet{kamoi2024when}: LLMs cannot find reasoning errors but can correct them given the error location.
+When instructed to ``find errors'' with increasing urgency, the model does not become better at detecting real errors---it becomes more willing to \emph{fabricate} errors where none exist.
+Harsher instructions essentially lower the model's threshold for declaring something an error, increasing false positives without meaningfully improving true positives.
+
+\subsection{Why Do Budget Constraints Help?}
+
+Our budget control results are consistent with three lines of prior work: \tale \citep{han2024token} showed explicit budgets improve efficiency and accuracy; \ccot \citep{nayab2024concise} demonstrated redundancy reduction without accuracy loss; and \citet{wu2025when} provided theoretical evidence for an optimal \chainofthought length shorter than what models naturally produce.
+
+The mechanism is that budget constraints force the model to focus on essential reasoning steps, eliminating verbose filler that can introduce confusion or error.
+At 75 words, the model must identify the most direct solution path, which for \gsmk problems is often straightforward arithmetic that does not benefit from elaborate exposition.
+
+\subsection{The Budget--Critique Interaction}
+
+The factorial experiment reveals that budget constraints partially rescue accuracy under harsh critique (88.0\% $\to$ 92.0\%).
+This suggests that critique-induced damage is partly mediated by verbosity---when the model has unlimited space to critique, it generates more spurious objections.
+Constraining the critique response limits this error amplification.
+However, even with tight budget constraints, critique still degrades performance relative to no critique at the same budget level (92.0\% vs.\ 96.7\%).
+Budget control is a partial but not complete antidote to critique-induced harm.
+
+\subsection{Why Do Alternative Strategies Fail?}
+
+The failure of all alternative strategies reveals that \gptmini is already near its capability ceiling on \gsmk.
+At 95.3\% baseline accuracy, there is little room for improvement, and any intervention that introduces additional processing risks degrading rather than improving performance.
+
+High-stakes emotional framing has zero effect on mathematical reasoning---the model does not ``try harder'' in response to emotional pressure.
+Self-consistency voting over five samples at $T=0.7$ uses 5$\times$ the compute for no gain, because the per-sample accuracy is already so high that disagreements are rare.
+The explicit rubric creates a critique-like intervention, and consistent with our main finding, shows a slight accuracy decrease.
+
+\subsection{Limitations}
+
+\para{Single model.}
+We test only \gptmini.
+Results may differ for weaker models (where the baseline is lower and there is more room for improvement) or for reasoning-specialized models such as o1/o3.
+On weaker models, self-critique might be more beneficial because there are more genuine errors to detect and correct.
+
+\para{Single benchmark.}
+\gsmk represents a specific task type (grade-school math).
+On tasks where quality is more subjective (dialogue, creative writing, code review), self-critique may behave differently.
+\selfrefine showed improvements on such tasks even when math reasoning did not benefit.
+
+\para{Near-ceiling baseline.}
+At 95--96\% accuracy, there is limited headroom.
+On harder benchmarks (MATH, GPQA), self-critique might be more beneficial because the error rate is higher, providing more opportunities for genuine error detection.
+
+\para{Sample size.}
+With 150--200 problems per experiment, we have limited statistical power for detecting small effects ($<$3 percentage points).
+Our significant results ($p < 0.01$ for harsh critique) are robust, but smaller effects may go undetected.
+
+\para{Fixed critique structure.}
+We use single-round generate-then-critique.
+Multi-round iterative refinement, as in \selfrefine, was not tested.
+It is possible that multiple rounds of gentle critique could accumulate improvements, though \citet{xu2024pride} found that self-bias amplifies over iterations.

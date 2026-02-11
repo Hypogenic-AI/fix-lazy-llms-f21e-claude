@@ -1,0 +1,9 @@
+\begin{abstract}
+Large language models (LLMs) often produce generic or shallow responses despite being capable of more careful work---a phenomenon known as the ``lazy LLM'' problem.
+A popular hypothesis holds that prompting LLMs to be harsher critics of their own work should improve output quality.
+We systematically test this hypothesis through four controlled experiments on the \gsmk math reasoning benchmark using \gptmini.
+Our findings are striking and counterintuitive: (1)~increasing self-critique stringency \emph{monotonically degrades} accuracy from 96.0\% to 91.0\% ($p < 0.01$), contradicting the popular intuition; (2)~token budget constraints maintain or slightly improve accuracy (96.7\%) while reducing token usage by 32\%; (3)~budget constraints partially mitigate critique-induced damage in a factorial design; and (4)~no alternative effort-inducing strategy---including high-stakes framing, explicit rubrics, step verification, or self-consistency voting---outperforms simple \chainofthought prompting, despite using 1.2--5$\times$ more tokens.
+These results demonstrate that the ``lazy LLM'' problem is not solvable through harder self-critique.
+Self-critique introduces errors by causing models to second-guess correct answers at a higher rate than it repairs incorrect ones.
+The most effective intervention is simply constraining response length, which forces concise reasoning without the error amplification of self-evaluation.
+\end{abstract}

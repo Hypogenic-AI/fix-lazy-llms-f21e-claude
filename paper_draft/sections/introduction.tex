@@ -1,0 +1,34 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Users of large language models frequently complain that models ``take the easy way out''---producing verbose but superficial responses, using brute-force approaches instead of elegant solutions, and failing to demonstrate the careful reasoning they are capable of.
+This perception is empirically grounded: \selfrefine \citep{madaan2023selfrefine} showed that LLM outputs consistently fall short of model capability, while \citet{poddar2025brevity} found responses are 3--20$\times$ longer than necessary for factual questions.
+A common folk hypothesis holds that being more aggressive in prompting---asking the model to try harder, framing the task as high-stakes, or instructing it to ruthlessly critique its own work---should produce better results.
+
+We test this hypothesis directly.
+Across four experiments on the \gsmk math reasoning benchmark \citep{cobbe2021training} using \gptmini, we find that \textbf{harsher self-critique monotonically degrades accuracy} from 96.0\% (no critique) to 91.0\% (harsh critique, $p < 0.01$).
+The model is more likely to ``find'' errors in correct solutions than to detect and fix real errors---a phenomenon we term \emph{asymmetric error introduction}.
+In contrast, simply constraining response length to 75 words achieves 96.7\% accuracy while using 32\% fewer tokens.
+No other effort-inducing strategy (high-stakes framing, explicit rubrics, step verification, or self-consistency voting) outperforms simple \chainofthought prompting.
+
+\para{Gap in existing work.}
+The literature on LLM self-correction is divided.
+\selfrefine \citep{madaan2023selfrefine} demonstrated improvements through iterative self-feedback on subjective tasks but showed near-zero improvement on math reasoning.
+\citet{huang2024large} found that intrinsic self-correction degrades reasoning performance, and \citet{kamoi2024when} concluded that self-correction on reasoning tasks has never been demonstrated to work under fair conditions.
+However, no prior work has systematically varied the \emph{stringency} of self-critique from gentle to adversarial, tested the interaction between critique intensity and response budget, or compared critique-based approaches against multiple alternative effort-inducing strategies within a unified experimental framework.
+
+\para{Our contributions.}
+We make the following contributions:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+\item We conduct the first systematic study of critique stringency, testing five levels from no critique to adversarial self-evaluation, and show that accuracy degrades monotonically with harshness.
+\item We demonstrate that token budget constraints are a simple, effective intervention that maintains or improves accuracy while reducing computational cost by up to 32\%.
+\item We show through a $3 \times 3$ factorial design that budget constraints partially mitigate critique-induced damage, and we identify the mechanism: constraining critique length limits the model's ability to fabricate errors.
+\item We compare five effort-inducing strategies and find that none outperforms simple \chainofthought prompting on a near-ceiling benchmark, establishing a negative but practically important result.
+\end{itemize}
+
+The remainder of this paper is organized as follows.
+\Secref{sec:related} reviews related work on self-correction and budget control.
+\Secref{sec:method} describes our experimental design.
+\Secref{sec:results} presents results across all four experiments.
+\Secref{sec:discussion} discusses implications, mechanisms, and limitations.
+\Secref{sec:conclusion} concludes.

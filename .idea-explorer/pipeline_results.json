@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "stages": {
+    "resource_finder": {
+      "success": true,
+      "completion_marker": "/workspaces/fix-lazy-llms-f21e-claude/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/fix-lazy-llms-f21e-claude/literature_review.md",
+        "resources_catalog": "/workspaces/fix-lazy-llms-f21e-claude/resources.md",
+        "papers_dir": "/workspaces/fix-lazy-llms-f21e-claude/papers",
+        "datasets_dir": "/workspaces/fix-lazy-llms-f21e-claude/datasets",
+        "code_dir": "/workspaces/fix-lazy-llms-f21e-claude/code"
+      },
+      "log_file": "/workspaces/fix-lazy-llms-f21e-claude/logs/resource_finder_claude.log",
+      "transcript_file": "/workspaces/fix-lazy-llms-f21e-claude/logs/resource_finder_claude_transcript.jsonl",
+      "elapsed_time": 1937.1146643161774
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 13645.044064044952,
+      "log_file": "/workspaces/fix-lazy-llms-f21e-claude/logs/execution_claude.log",
+      "transcript_file": "/workspaces/fix-lazy-llms-f21e-claude/logs/execution_claude_transcript.jsonl"
+    }
+  },
+  "work_dir": "/workspaces/fix-lazy-llms-f21e-claude"
+}

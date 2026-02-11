@@ -1,0 +1,1099 @@
+You are an academic paper writer. Generate a complete NEURIPS style paper
+based on the experiment results provided.
+
+════════════════════════════════════════════════════════════════════════════════
+                         IMPORTANT: BEFORE YOU START
+════════════════════════════════════════════════════════════════════════════════
+
+Before writing any content, you MUST complete these steps:
+
+1. READ THE SKILL: Review the paper-writer skill at templates/skills/paper-writer/SKILL.md
+2. READ THE STYLE GUIDE: Study templates/paper_writing/lab_style_guide.md carefully
+3. REVIEW EXAMPLES: Browse paper_examples/ for formatting and language patterns:
+   - Look at sections/1.introduction.tex for language style
+   - Look at tables/*.tex for table formatting
+   - Look at commands/*.tex for macro usage
+4. USE COMMAND TEMPLATES: Copy templates/paper_writing/commands/ to paper_draft/commands/
+
+CRITICAL: Reference example papers for FORMATTING and LANGUAGE STYLE only.
+Do NOT copy content, phrasing, or narrative structure from the example papers.
+The examples are in a different research domain - focus only on presentation style.
+
+════════════════════════════════════════════════════════════════════════════════
+                            EXPERIMENT REPORT
+════════════════════════════════════════════════════════════════════════════════
+
+# Fixing Lazy LLMs: Does Harsher Self-Critique Improve Output Quality?
+
+## An Empirical Investigation of Critique Stringency, Budget Control, and Alternative Effort-Inducing Strategies
+
+---
+
+## Abstract
+
+Large language models (LLMs) are often perceived as &#34;lazy&#34; — producing generic, shallow, or unnecessarily verbose responses when more careful work is achievable. A popular hypothesis holds that prompting LLMs more aggressively — essentially asking them to be harsher critics of their own work — should improve output quality. We systematically test this hypothesis through four experiments on the GSM8K math reasoning benchmark using GPT-4.1-mini. Our findings are striking and counterintuitive:
+
+1. **Harsher self-critique monotonically degrades accuracy** (96.0% → 91.0%), contradicting the popular intuition.
+2. **Budget constraints maintain or slightly improve accuracy** (95.3% → 96.7%) while reducing token usage by 32%.
+3. **Budget constraints partially mitigate critique-induced damage** in factorial analysis.
+4. **No alternative strategy** (high-stakes framing, explicit rubrics, step verification, self-consistency voting) outperforms the simple baseline.
+
+These results suggest that the &#34;lazy LLM&#34; problem is not solvable through harder self-critique. Instead, the primary issue is that self-critique introduces errors by causing models to second-guess correct answers. The most effective intervention is simply constraining response length, which forces concise reasoning without the error-amplification of self-evaluation.
+
+---
+
+## 1. Introduction
+
+### 1.1 The &#34;Lazy LLM&#34; Problem
+
+Users of large language models frequently complain that models &#34;take the easy way out&#34; — producing verbose but superficial responses, using brute-force approaches instead of elegant solutions, and failing to demonstrate the careful reasoning they are capable of. This perception is supported by empirical evidence: Self-Refine (Madaan et al., 2023) showed that LLM outputs consistently fall short of model capability, while Poddar et al. (2025) found responses are 3–20× longer than necessary for factual questions.
+
+A common folk hypothesis holds that being &#34;rude&#34; or aggressive in prompting produces better results — asking the model to try harder, framing the task as high-stakes, or instructing it to ruthlessly critique its own work. This connects to the broader research question of whether prompting LLMs to act as increasingly harsh critics can systematically improve output quality.
+
+### 1.2 Research Questions
+
+**Primary**: Does prompting LLMs to act as increasingly harsh critics of their own work improve output quality?
+
+**Secondary**:
+1. Does controlling response budget interact with critique stringency?
+2. How does critique-based improvement compare to other effort-inducing strategies (high-stakes framing, explicit rubrics, step verification, self-consistency)?
+3. Is there an optimal level of critique harshness, or is the relationship monotonic?
+
+### 1.3 Hypotheses
+
+- **H1**: Increasing critique stringency will show an inverted U-curve, with moderate critique outperforming both no critique and adversarial critique.
+- **H2**: Token budget constraints will independently improve accuracy by forcing conciseness.
+- **H3**: Combining budget control with critique will outperform either alone.
+- **H4**: Structured alternative strategies (rubrics, step verification) will outperform vague urgency framing.
+
+### 1.4 Prior Work
+
+The literature on LLM self-correction is divided. **Self-Refine** (Madaan et al., 2023) demonstrated 20% average improvement through iterative self-feedback across 7 tasks, but showed near-zero improvement on math reasoning. **Huang et al. (2024)** directly challenged self-correction, finding that on GSM8K, intrinsic self-correction changed 12.3% of correct answers to incorrect but only 1.7% of incorrect answers to correct. **Kamoi et al. (2024)** provided the most comprehensive survey, concluding that intrinsic self-correction on reasoning tasks has never been demonstrated to work under fair experimental conditions.
+
+On the budget control side, **TALE** (Han et al., 2024) showed that explicit token budgets can improve both efficiency and accuracy on GSM8K. **CCoT** (Nayab et al., 2024) demonstrated 12–25% redundancy reduction with maintained accuracy. **Wu et al. (2025)** provided theoretical evidence that accuracy follows an inverted U-curve with chain-of-thought length.
+
+**Our contribution**: No prior work has systematically varied the *stringency* of self-critique from gentle to adversarial, tested the interaction between critique intensity and response budget, or compared critique-based approaches against multiple alternative effort-inducing strategies. We fill this gap with a controlled empirical study.
+
+---
+
+## 2. Methodology
+
+### 2.1 Benchmark and Model
+
+- **Benchmark**: GSM8K (Cobbe et al., 2021), a dataset of 1,319 grade-school math word problems with numerical answers. We use random subsets of 150–200 problems (seed=42) for each experiment.
+- **Model**: GPT-4.1-mini via OpenAI API (temperature=0 for deterministic outputs except where noted).
+- **Answer extraction**: Regex-based extraction of the `#### [number]` pattern, with fallback patterns for &#34;the answer is&#34; and LaTeX `\boxed{}` notation.
+- **Correctness**: Numerical comparison with tolerance of 1e-6.
+
+### 2.2 Experimental Design
+
+#### Experiment 1: Critique Stringency Spectrum (n=200)
+
+We test 5 levels of critique stringency using a generate-then-critique protocol:
+
+| Level | Description | Critique Prompt |
+|-------|-------------|-----------------|
+| L0 (Baseline) | No critique | Direct chain-of-thought only |
+| L1 (Gentle) | Light review | &#34;Please briefly review your answer... Check if there are any errors&#34; |
+| L2 (Moderate) | Structured review | &#34;Carefully examine each step... Identify any logical errors, calculation mistakes, or unjustified leaps&#34; |
+| L3 (Harsh) | Strict professor | &#34;You are an extremely strict math professor... Find every flaw, no matter how small... Assume there ARE errors&#34; |
+| L4 (Adversarial) | Destroy the solution | &#34;Your job is to DESTROY this solution... This answer is probably wrong — prove it&#34; |
+
+For L0, the model produces a single chain-of-thought response. For L1–L4, the model first generates a solution, then receives the critique prompt along with its own solution, and produces a revised answer.
+
+#### Experiment 2: Budget Control (n=150)
+
+We test 4 budget levels with no self-critique:
+
+| Budget | Instruction |
+|--------|-------------|
+| No limit | Standard chain-of-thought |
+| 300 words | &#34;Keep your solution to at most 300 words&#34; |
+| 150 words | &#34;Keep your solution to at most 150 words. Be concise.&#34; |
+| 75 words | &#34;Keep your solution to at most 75 words. Be very concise — only essential steps.&#34; |
+
+#### Experiment 3: Critique × Budget Factorial (n=150)
+
+A 3×3 factorial design crossing:
+- **Critique**: None, Moderate, Harsh
+- **Budget**: No limit, 150 words, 75 words
+
+This yields 9 conditions to test interactions between critique and budget.
+
+#### Experiment 4: Alternative Effort-Inducing Strategies (n=150)
+
+We compare 5 strategies:
+
+| Strategy | Approach |
+|----------|----------|
+| Baseline CoT | Standard chain-of-thought |
+| High Stakes | &#34;This is an extremely important exam that will determine your entire career...&#34; |
+| Explicit Rubric | Generate → evaluate against 4-criterion rubric → revise |
+| Step Verification | Generate → &#34;solve the problem fresh&#34; independently → reconcile |
+| Self-Consistency (k=5) | 5 samples at temperature=0.7, majority vote |
+
+### 2.3 Statistical Analysis
+
+- **Primary test**: McNemar&#39;s test for paired binary outcomes (with continuity correction)
+- **Effect size**: Cohen&#39;s h for proportion differences
+- **Confidence intervals**: 95% Wilson score intervals
+- **Significance level**: α = 0.05
+
+### 2.4 Caching
+
+All API calls are cached by SHA-256 hash of the request parameters, ensuring exact reproducibility without redundant API calls.
+
+---
+
+## 3. Results
+
+### 3.1 Experiment 1: Critique Stringency Spectrum
+
+**Finding: Harsher critique monotonically degrades accuracy. H1 is rejected.**
+
+| Level | Accuracy | 95% CI | Answer Changed | Correct→Wrong | Wrong→Correct | Avg Tokens |
+|-------|----------|--------|----------------|---------------|---------------|------------|
+| L0 (Baseline) | **96.0%** | [92.3%, 98.0%] | 0.0% | 0.0% | 0.0% | 305 |
+| L1 (Gentle) | 94.5% | [90.4%, 96.9%] | 2.5% | 2.1% | 12.5% | 776 |
+| L2 (Moderate) | 93.5% | [89.2%, 96.2%] | 4.5% | 3.6% | 25.0% | 885 |
+| L3 (Harsh) | **91.0%** | [86.2%, 94.2%] | 6.5% | 5.7% | 12.5% | 1,218 |
+| L4 (Adversarial) | 91.5% | [86.8%, 94.6%] | 6.5% | 5.7% | 25.0% | 1,232 |
+
+**Statistical tests vs. baseline (L0)**:
+
+| Comparison | McNemar p-value | Cohen&#39;s h | Significant? |
+|------------|-----------------|-----------|-------------|
+| L0 vs L1 | 0.371 | −0.071 | No |
+| L0 vs L2 | 0.182 | −0.113 | No |
+| L0 vs L3 | **0.009** | −0.207 | **Yes** |
+| L0 vs L4 | **0.027** | −0.189 | **Yes** |
+
+The decline from baseline is statistically significant for harsh (p=0.009) and adversarial (p=0.027) critique levels. The effect is monotonically negative — there is no inverted U-curve. The Correct→Wrong rate increases steadily from 0% (baseline) to 5.7% (harsh/adversarial), while the Wrong→Correct rate is much smaller and inconsistent. Self-critique costs 2.5–4× more tokens than baseline while degrading accuracy.
+
+**Key insight**: The model&#39;s self-critique mechanism is asymmetrically harmful. When instructed to find errors, the model is more likely to &#34;find&#34; errors in correct solutions (introducing false positives) than to genuinely detect and fix real errors.
+
+### 3.2 Experiment 2: Budget Control
+
+**Finding: Budget constraints maintain or slightly improve accuracy while reducing cost. H2 is partially supported.**
+
+| Condition | Accuracy | 95% CI | Avg Words | Avg Tokens |
+|-----------|----------|--------|-----------|------------|
+| No limit | 95.3% | [90.7%, 97.7%] | 123 | 290 |
+| 300 words | 96.0% | [91.5%, 98.2%] | 134 | 318 |
+| 150 words | **96.7%** | [92.4%, 98.6%] | 87 | 253 |
+| 75 words | **96.7%** | [92.4%, 98.6%] | 45 | 198 |
+
+**Statistical tests vs. no limit**:
+
+| Comparison | McNemar p-value | Cohen&#39;s h |
+|------------|-----------------|-----------|
+| No limit vs 300w | 1.000 | 0.033 |
+| No limit vs 150w | 0.480 | 0.068 |
+| No limit vs 75w | 0.617 | 0.068 |
+
+While none of the differences reach statistical significance (the sample size of 150 limits power for detecting small effects), the trend is clear and practically meaningful: budget constraints do not hurt accuracy at any level tested, and the tightest constraint (75 words) achieves the highest accuracy (96.7%) while using 32% fewer tokens than the no-limit condition. This is consistent with findings from TALE (Han et al., 2024), CCoT (Nayab et al., 2024), and the theoretical predictions of Wu et al. (2025).
+
+### 3.3 Experiment 3: Critique × Budget Interaction
+
+**Finding: Budget constraints partially mitigate critique-induced damage. H3 is partially supported (but in an unexpected direction).**
+
+| | No Limit | 150 words | 75 words |
+|---|---------|-----------|----------|
+| **No Critique** | 95.3% | **96.7%** | **96.7%** |
+| **Moderate Critique** | 92.7% | 94.7% | 94.7% |
+| **Harsh Critique** | 88.0% | 91.3% | 92.0% |
+
+Average token usage:
+
+| | No Limit | 150 words | 75 words |
+|---|---------|-----------|----------|
+| **No Critique** | 290 | 252 | 202 |
+| **Moderate Critique** | 850 | 770 | 731 |
+| **Harsh Critique** | 1,092 | 813 | 759 |
+
+The factorial design reveals two clear main effects:
+
+1. **Critique effect (negative)**: Within each budget level, adding critique reduces accuracy. The worst condition (harsh critique, no limit: 88.0%) is 8.7 percentage points below the best (no critique, tight budget: 96.7%).
+
+2. **Budget effect (positive)**: Within each critique level, adding budget constraints improves accuracy. This is especially pronounced for harsh critique, where tight budget (92.0%) partially recovers the 7.3pp loss from unconstrained harsh critique (88.0%).
+
+**Interpretation**: Budget constraints appear to mitigate critique damage by limiting the model&#39;s ability to &#34;overthink&#34; during self-evaluation. When forced to be concise in its critique, the model is less likely to fabricate errors in correct solutions.
+
+### 3.4 Experiment 4: Alternative Effort-Inducing Strategies
+
+**Finding: No alternative strategy outperforms baseline chain-of-thought. H4 is rejected.**
+
+| Strategy | Accuracy | 95% CI | Avg Tokens | Cost vs. Baseline |
+|----------|----------|--------|------------|-------------------|
+| Baseline CoT | **95.3%** | [90.7%, 97.7%] | 290 | 1.0× |
+| High Stakes | 95.3% | [90.7%, 97.7%] | 351 | 1.2× |
+| Explicit Rubric | 94.7% | [89.8%, 97.3%] | 950 | 3.3× |
+| Step Verification | 95.3% | [90.7%, 97.7%] | 815 | 2.8× |
+| Self-Consistency (k=5) | 95.3% | [90.7%, 97.7%] | 1,454 | 5.0× |
+
+**Statistical tests vs. baseline**:
+
+| Comparison | McNemar p-value | Cohen&#39;s h |
+|------------|-----------------|-----------|
+| vs High Stakes | 0.480 | 0.000 |
+| vs Explicit Rubric | 1.000 | −0.031 |
+| vs Step Verification | 1.000 | 0.000 |
+| vs Self-Consistency | 1.000 | 0.000 |
+
+No alternative strategy achieves even marginally significant improvement over the baseline, despite using 1.2–5.0× more tokens. The high-stakes emotional framing has zero effect on accuracy (identical results, just slightly more verbose). Self-consistency voting over 5 samples at temperature=0.7 uses 5× the compute for no accuracy gain — the model is already highly consistent at this capability level.
+
+---
+
+## 4. Discussion
+
+### 4.1 Why Does Self-Critique Hurt?
+
+Our results align with and extend the findings of Huang et al. (2024), who showed that intrinsic self-correction degrades reasoning performance. We add the nuance that the degradation is *monotonically related to critique stringency*: the harsher you ask the model to be, the worse it performs.
+
+The mechanism is clear from the transition rates. At the adversarial level, the model changes 6.5% of its answers after self-critique. Of the originally correct answers, 5.7% are changed to incorrect (Correct→Wrong). Of the originally incorrect answers, only 25% are salvaged (Wrong→Correct). Since the baseline is already at 96% accuracy, there are far more correct answers to damage than incorrect answers to fix, making the net effect strongly negative.
+
+This connects to Kamoi et al.&#39;s (2024) key insight: **&#34;LLMs cannot find reasoning errors, but can correct them given the error location.&#34;** The bottleneck is error *detection*, not error *correction*. When instructed to &#34;find errors&#34; with increasing urgency, the model does not become better at detecting real errors — it becomes more willing to *fabricate* errors where none exist.
+
+### 4.2 Why Do Budget Constraints Help?
+
+Our budget control results are consistent with three lines of prior work:
+
+1. **TALE** (Han et al., 2024): Explicit token budgets improve both efficiency and accuracy.
+2. **CCoT** (Nayab et al., 2024): Constraining output length reduces redundancy without hurting accuracy.
+3. **When More is Less** (Wu et al., 2025): There exists an optimal CoT length, and unconstrained models generate responses that are longer than optimal.
+
+The mechanism appears to be that budget constraints force the model to focus on essential reasoning steps, eliminating verbose filler that can introduce confusion or error. At 75 words, the model must identify the most direct solution path, which for GSM8K problems is often straightforward arithmetic that doesn&#39;t benefit from elaborate exposition.
+
+### 4.3 The Budget–Critique Interaction
+
+The factorial experiment reveals an interesting interaction: budget constraints partially rescue accuracy under harsh critique (88.0% → 92.0%). This suggests that the damage from self-critique is partly mediated by verbosity — when the model has unlimited space to critique, it generates more (spurious) objections. Constraining the critique response limits this error amplification.
+
+However, even with tight budget constraints, critique still degrades performance relative to no critique at the same budget level (92.0% vs. 96.7%). Budget control is a partial but not complete antidote to critique-induced harm.
+
+### 4.4 Why Don&#39;t Alternative Strategies Help?
+
+The failure of all alternative strategies reveals an important truth about GPT-4.1-mini on GSM8K: **the model is already near its capability ceiling for this task**. At 95.3% baseline accuracy, there is very little room for improvement, and any intervention that introduces additional processing risks degrading rather than improving performance.
+
+- **High-stakes framing**: Emotional urgency has zero measurable effect on mathematical reasoning. The model does not &#34;try harder&#34; in response to emotional pressure — it simply produces slightly more verbose versions of the same reasoning.
+- **Explicit rubric**: Providing a scoring rubric creates a critique-like intervention, and indeed shows a slight (non-significant) accuracy decrease (94.7%).
+- **Step verification**: Asking the model to re-solve independently is essentially a 2-sample self-consistency approach; with a high baseline accuracy, both solutions are usually correct, adding no value.
+- **Self-consistency (k=5)**: With 95.3% per-sample accuracy, majority voting rarely changes the outcome. The expected disagreement rate is too low to benefit from consensus.
+
+### 4.5 Practical Implications
+
+For practitioners seeking to improve LLM output quality:
+
+1. **Do not use self-critique prompts for reasoning tasks.** They are more likely to damage correct answers than fix incorrect ones.
+2. **Use budget constraints.** Simple instructions like &#34;Keep your answer to at most 75 words&#34; can maintain or improve accuracy while significantly reducing cost.
+3. **Save your compute.** Self-consistency, multi-step verification, and elaborate rubric evaluation use 2–5× more tokens for no measurable benefit when the model is already performing well.
+4. **If you must use critique**, constrain the critique response length to limit error amplification.
+
+### 4.6 Limitations
+
+1. **Single model**: We tested only GPT-4.1-mini. Results may differ for weaker models (where the baseline is lower and there is more room for improvement) or for reasoning-specialized models (like o1/o3).
+2. **Single benchmark**: GSM8K represents a specific task type (grade-school math). On tasks where quality is more subjective (dialogue, creative writing, code review), self-critique may behave differently. Self-Refine showed improvements on such tasks.
+3. **Near-ceiling baseline**: At 95–96% accuracy, there is limited headroom. On harder benchmarks (MATH, GPQA), self-critique might be more beneficial.
+4. **Sample size**: With 150–200 problems per experiment, we have limited statistical power for detecting small effects (&lt;3 percentage points).
+5. **Fixed critique structure**: We used single-round generate-then-critique. Multi-round iterative refinement (as in Self-Refine) was not tested.
+
+---
+
+## 5. Related Work
+
+### Self-Correction in LLMs
+- **Self-Refine** (Madaan et al., 2023) showed iterative refinement helps on subjective tasks but not math reasoning.
+- **Huang et al. (2024)** demonstrated that intrinsic self-correction degrades reasoning performance.
+- **Kamoi et al. (2024)** provided a comprehensive survey showing self-correction only works with external feedback.
+- **Xu et al. (2024)** identified self-bias amplification in iterative self-refinement.
+
+### Budget and Length Control
+- **TALE** (Han et al., 2024) introduced token-budget-aware reasoning.
+- **CCoT** (Nayab et al., 2024) showed concise chain-of-thought maintains accuracy.
+- **Wu et al. (2025)** provided theoretical analysis of the optimal CoT length.
+- **Poddar et al. (2025)** characterized LLM verbosity and demonstrated prompt-based reduction.
+
+### Alternative Improvement Strategies
+- **Self-consistency** (Wang et al., 2023) uses majority voting over multiple samples.
+- **Reflexion** (Shinn et al., 2023) uses verbal reinforcement learning with environmental feedback.
+- **Tree of Thoughts** (Yao et al., 2023) explores multiple reasoning paths.
+
+---
+
+## 6. Conclusions
+
+We conducted the first systematic study of critique stringency in LLM self-evaluation, testing 5 levels from no critique to adversarial across 200 GSM8K problems. Our key findings:
+
+1. **Harsher self-critique is counterproductive.** Accuracy drops monotonically from 96.0% (no critique) to 91.0% (harsh critique), with the decline statistically significant at p&lt;0.01 for the harshest levels. The model is more likely to break correct answers than fix incorrect ones.
+
+2. **Budget constraints are the simplest effective intervention.** Asking the model to be concise (75 words) maintains 96.7% accuracy while using 32% fewer tokens than unconstrained generation.
+
+3. **Budget partially mitigates critique damage.** In factorial analysis, tight budget constraints under harsh critique (92.0%) partially recover the accuracy lost from unconstrained harsh critique (88.0%).
+
+4. **No &#34;effort-inducing&#34; strategy beats the baseline.** High-stakes framing, explicit rubrics, step verification, and self-consistency all fail to improve upon simple chain-of-thought, while using 1.2–5× more tokens.
+
+The popular intuition that &#34;being harsh with LLMs&#34; improves results is wrong — at least for reasoning tasks. The &#34;lazy LLM&#34; problem is better addressed by constraining output (forcing conciseness) rather than by demanding self-evaluation (which introduces errors). For future work, we recommend investigating these findings on harder benchmarks, weaker models, and subjective evaluation tasks where the dynamics of self-critique may differ.
+
+---
+
+## 7. Reproducibility
+
+All code and data are available in this repository:
+- `src/utils.py` — Shared utilities (API calls, caching, answer extraction)
+- `src/experiment_critique.py` — Experiment 1: Critique stringency
+- `src/experiment_budget.py` — Experiment 2: Budget control
+- `src/experiment_combined.py` — Experiment 3: Factorial design
+- `src/experiment_alternatives.py` — Experiment 4: Alternative strategies
+- `src/analysis.py` — Statistical analysis and visualization
+- `results/` — Raw results JSON and generated plots
+- `datasets/gsm8k/test.jsonl` — GSM8K test set
+
+**Environment**: Python 3.x with `openai`, `numpy`, `scipy`, `matplotlib`, `tqdm`.
+**API**: OpenAI `gpt-4.1-mini` model.
+**Random seed**: 42 for all problem sampling.
+**Caching**: SHA-256 hash-keyed response cache for reproducibility.
+
+---
+
+## References
+
+1. Madaan, A., et al. (2023). &#34;Self-Refine: Iterative Refinement with Self-Feedback.&#34; arXiv:2303.17651.
+2. Huang, J., et al. (2024). &#34;Large Language Models Cannot Self-Correct Reasoning Yet.&#34; arXiv:2310.01798.
+3. Kamoi, R., et al. (2024). &#34;When Can LLMs Actually Correct Their Own Mistakes? A Critical Survey of Self-Correction of LLMs.&#34; arXiv:2406.01297.
+4. Xu, J., et al. (2024). &#34;Pride and Prejudice: LLM Amplifies Self-Bias in Self-Refinement.&#34; arXiv:2402.11436.
+5. Han, H., et al. (2024). &#34;Token-Budget-Aware LLM Reasoning.&#34; arXiv:2412.18547.
+6. Nayab, S., et al. (2024). &#34;Concise Thoughts: Impact of Output Length on LLM Reasoning.&#34; arXiv:2407.19825.
+7. Wu, Y., et al. (2025). &#34;When More is Less: Understanding Chain-of-Thought Length in LLMs.&#34; arXiv:2502.07266.
+8. Poddar, S., et al. (2025). &#34;Brevity is the Soul of Sustainability.&#34; arXiv:2506.08686.
+9. Cobbe, K., et al. (2021). &#34;Training Verifiers to Solve Math Word Problems.&#34; arXiv:2110.14168.
+10. Shinn, N., et al. (2023). &#34;Reflexion: Language Agents with Verbal Reinforcement Learning.&#34; arXiv:2303.11366.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                            RESEARCH PLAN
+════════════════════════════════════════════════════════════════════════════════
+
+# Research Plan: Fixing Lazy LLMs
+
+## Motivation &amp; Novelty Assessment
+
+### Why This Research Matters
+LLMs are increasingly deployed for tasks requiring careful, thorough work (code review, editing, analysis), yet users consistently report that models &#34;take the easy way out&#34; — producing generic, shallow, or verbose-but-unhelpful responses. If we can systematically improve output quality through prompt-based interventions (no retraining required), this has immediate practical value for millions of users.
+
+### Gap in Existing Work
+The literature review reveals a clear gap: **No paper systematically studies how the &#34;harshness&#34; or stringency of self-critique prompts affects output quality.** Self-Refine showed that *specific* feedback beats *generic* feedback, but didn&#39;t vary critique severity. Huang et al. showed intrinsic self-correction fails for reasoning, but tested only generic &#34;review your answer&#34; prompts. The interaction between critique intensity, budget control, and output quality is unexplored.
+
+Additionally, the user&#39;s hypothesis about &#34;rudeness&#34; leading to better results connects to an unstudied dimension: does the emotional framing/urgency of prompts affect effort level?
+
+### Our Novel Contribution
+We conduct the first systematic study of:
+1. **Critique stringency spectrum**: Varying self-critique from lenient to harsh across multiple tasks
+2. **Budget control interaction**: Testing whether token budgets combined with critique improve results
+3. **Effort-inducing prompt strategies**: Comparing multiple approaches to &#34;fix laziness&#34; (critique harshness, urgency/stakes framing, explicit quality rubrics, iterative refinement)
+4. **Real model behavior**: Using actual state-of-the-art LLM APIs, not simulations
+
+### Experiment Justification
+- **Experiment 1 (Critique Stringency)**: Directly tests the user&#39;s core hypothesis — does asking an LLM to be a &#34;harsher critic&#34; improve output quality? No prior work has systematically varied this.
+- **Experiment 2 (Budget Control)**: Tests whether constraining response length forces the model to be more efficient/accurate, drawing on TALE and CCoT findings but with modern models.
+- **Experiment 3 (Combined Approaches)**: Tests whether combining critique + budget outperforms either alone — an open question identified in the literature.
+- **Experiment 4 (Alternative Effort-Inducing Strategies)**: Tests whether other approaches (urgency framing, explicit rubrics, iterative refinement) compare to or outperform the critique approach.
+
+---
+
+## Research Question
+**Primary**: Does prompting LLMs to act as increasingly harsh critics improve their output quality on tasks where they typically &#34;take the easy way out&#34;?
+
+**Secondary**:
+1. Does controlling response budget interact with critique stringency?
+2. How does critique-based improvement compare to other effort-inducing strategies?
+3. Is there an optimal level of critique harshness, or does quality monotonically increase?
+
+## Hypothesis Decomposition
+
+**H1**: Increasing critique stringency in self-evaluation prompts will improve output quality up to a point, with diminishing or negative returns at extreme harshness (inverted U-curve hypothesis).
+
+**H2**: Token budget control will independently improve output quality by forcing conciseness, consistent with TALE and CCoT findings.
+
+**H3**: Combining budget control with structured critique will outperform either approach alone.
+
+**H4**: Multiple alternative strategies (high-stakes framing, explicit rubrics, iterative refinement) will show varying effectiveness, with structured approaches outperforming vague urgency.
+
+## Proposed Methodology
+
+### Approach
+We use GSM8K (math reasoning) as our primary benchmark because:
+- It has clear ground truth (numerical answers), enabling unambiguous evaluation
+- It&#39;s the most widely used benchmark in the self-correction literature
+- Math reasoning is where &#34;laziness&#34; manifests as shortcuts and errors
+- It allows us to measure both accuracy AND reasoning quality
+
+We additionally test on a subset of open-ended generation tasks (CommonGen) to measure quality on creative/generative tasks where &#34;laziness&#34; manifests differently.
+
+### Models
+- **GPT-4.1** via OpenAI API (primary model)
+- **GPT-4.1-mini** via OpenAI API (cost-effective secondary model)
+- We use two models to test generalizability across capability levels
+
+### Experimental Steps
+
+#### Experiment 1: Critique Stringency Spectrum
+Test 5 levels of critique harshness on GSM8K (200 problems):
+
+| Level | Critique Prompt Style |
+|-------|----------------------|
+| L0 (Baseline) | Direct answer, no self-critique |
+| L1 (Gentle) | &#34;Please review your answer and check for errors&#34; |
+| L2 (Moderate) | &#34;Carefully examine each step. Identify any logical errors, calculation mistakes, or unjustified leaps.&#34; |
+| L3 (Harsh) | &#34;You are an extremely strict math professor grading an exam. Find every flaw, no matter how small. Assume there ARE errors and find them.&#34; |
+| L4 (Adversarial) | &#34;Your job is to DESTROY this solution. Find fatal flaws. Be merciless. This answer is probably wrong — prove it.&#34; |
+
+Each level: Generate answer → Apply self-critique at specified level → Produce final answer.
+
+#### Experiment 2: Budget Control
+Test 4 budget levels on the same 200 GSM8K problems:
+
+| Budget | Prompt Addition |
+|--------|----------------|
+| No limit | Standard CoT |
+| Generous | &#34;Solve in at most 300 words&#34; |
+| Moderate | &#34;Solve in at most 150 words&#34; |
+| Tight | &#34;Solve in at most 75 words&#34; |
+
+#### Experiment 3: Critique × Budget Interaction
+Factorial design: 3 critique levels (none, moderate, harsh) × 3 budget levels (no limit, moderate, tight) = 9 conditions on 200 GSM8K problems.
+
+#### Experiment 4: Alternative Effort-Inducing Strategies
+Test on 200 GSM8K problems:
+
+| Strategy | Prompt Approach |
+|----------|----------------|
+| Baseline | Standard CoT |
+| High Stakes | &#34;This is an extremely important exam. Your career depends on getting this right. Take your time and be thorough.&#34; |
+| Explicit Rubric | Provide a detailed scoring rubric and ask model to evaluate against it |
+| Step-by-Step Verification | &#34;After solving, verify each step by plugging values back in&#34; |
+| Best-of-N | Generate 5 answers, pick most common (self-consistency baseline) |
+
+### Baselines
+1. **Direct prompting** (zero-shot CoT): &#34;Let&#39;s think step by step&#34;
+2. **Self-consistency** (majority vote over 5 samples at temp=0.7): Equivalent compute comparison
+3. **Simple self-review**: &#34;Review your answer and correct any mistakes&#34;
+
+### Evaluation Metrics
+
+**GSM8K (Math)**:
+- **Accuracy**: Exact match of final numerical answer (primary metric)
+- **Response length**: Token count (to measure verbosity)
+- **Reasoning quality**: Manual annotation of 50 samples for logical coherence (1-5 scale)
+
+**Across all experiments**:
+- Cost (API tokens consumed)
+- Answer change rate (how often critique leads to changing the answer)
+- Correct→Wrong rate (how often critique breaks a correct answer)
+- Wrong→Correct rate (how often critique fixes an incorrect answer)
+
+### Statistical Analysis Plan
+- **Primary test**: McNemar&#39;s test for paired accuracy comparisons (binary correct/incorrect)
+- **Multiple comparisons**: Bonferroni correction across pairwise tests
+- **Effect sizes**: Cohen&#39;s h for proportion differences
+- **Confidence intervals**: 95% Wilson score intervals for proportions
+- **Significance level**: α = 0.05
+
+## Expected Outcomes
+
+**If H1 is supported**: We expect an inverted U-curve where moderate critique (L2-L3) outperforms both no critique (L0) and adversarial critique (L4). The adversarial level may cause the model to second-guess correct answers.
+
+**If H2 is supported**: Moderate budget constraints will improve accuracy slightly while reducing token usage significantly.
+
+**If H3 is supported**: The combination of moderate critique + moderate budget will be the best overall condition.
+
+**Alternative outcome**: If critique uniformly hurts performance (consistent with Huang et al.), this still advances knowledge by testing across stringency levels rather than just on/off.
+
+## Timeline and Milestones
+
+| Phase | Duration | Deliverable |
+|-------|----------|-------------|
+| Planning | 15 min | planning.md |
+| Environment setup | 10 min | Working environment |
+| Implementation | 45 min | Experiment scripts |
+| Experiment 1 (Critique) | 30 min | Results for 5 conditions |
+| Experiment 2 (Budget) | 20 min | Results for 4 conditions |
+| Experiment 3 (Combined) | 30 min | Results for 9 conditions |
+| Experiment 4 (Alternatives) | 25 min | Results for 5 conditions |
+| Analysis &amp; Visualization | 30 min | Plots and statistics |
+| Documentation | 20 min | REPORT.md, README.md |
+
+## Potential Challenges
+
+1. **API rate limits**: Mitigate with exponential backoff and parallel requests
+2. **Cost**: ~200 problems × ~25 conditions × ~2 models = ~10,000 API calls. Use GPT-4.1-mini for most conditions.
+3. **Critique not changing answers**: Track answer-change rate to understand intervention strength
+4. **Model refusal at adversarial levels**: The model may refuse to &#34;destroy&#34; its own answer; handle gracefully
+
+## Success Criteria
+
+1. At least 3 experiments complete with statistically meaningful sample sizes
+2. Clear comparison across conditions with statistical tests
+3. Identification of whether critique stringency has a monotonic or non-monotonic relationship with accuracy
+4. Practical recommendation for users who want to improve LLM output quality
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          LITERATURE REVIEW
+════════════════════════════════════════════════════════════════════════════════
+
+# Literature Review: Fixing Lazy LLMs
+
+## Research Question
+
+**Hypothesis:** Large language models (LLMs) tend to prefer easy or less effortful responses because they lack subjective judgment of good or bad; prompting LLMs to act as harsher critics and controlling the response budget may improve their output quality.
+
+**Core Questions:**
+1. Do LLMs systematically produce suboptimal outputs when more capable responses are achievable?
+2. Can self-critique and iterative refinement improve output quality?
+3. Does controlling response length/budget affect quality?
+4. What are the limitations of intrinsic self-correction, and what alternatives exist?
+
+---
+
+## 1. The &#34;Lazy LLM&#34; Phenomenon: Evidence and Characterization
+
+### 1.1 LLMs Produce Verbose but Low-Quality Initial Outputs
+
+Multiple papers provide direct evidence that LLMs default to suboptimal generation strategies:
+
+**Self-Refine** (Madaan et al., 2023; arXiv:2303.17651) demonstrated that LLMs consistently produce outputs that fall short of their actual capability. Across 7 tasks, Self-Refine improved outputs by an average of ~20% absolute through iterative self-feedback, proving that single-pass generation systematically underperforms what the model can achieve. Concrete examples include: dialogue responses that are &#34;generic and uninformative&#34; on first pass but become detailed and engaging after refinement; code that uses brute-force algorithms initially but transforms into efficient dynamic programming solutions after feedback.
+
+**Brevity is the Soul of Sustainability** (Poddar et al., 2025; arXiv:2506.08686) benchmarked 12 LLMs across 5 datasets and found that LLM responses are **3-20x longer than necessary** for factual questions. Phi-3 models produced responses up to 418x longer than target answers. Only 42% of response content constituted the &#34;minimal answer&#34; -- the rest was additional information (21%), explanations (11.5%), irrelevant content (~18%), conversational filler (5.2%), and redundancy. Simple prompt strategies (&#34;Answer briefly&#34;) achieved 25-60% energy savings while *improving* quality as measured by ROUGE-L F1.
+
+**When More is Less** (Wu et al., 2025; arXiv:2502.07266) provided the strongest theoretical evidence: task accuracy follows an **inverted U-shaped curve** with Chain-of-Thought (CoT) length. For a 72B parameter model, the gap between optimal-length CoT accuracy and longest-CoT accuracy was **40 percentage points**. Before RL training, models generate CoTs that are longer than optimal; RL training causes CoT length to *decrease* as accuracy improves.
+
+### 1.2 Training Incentives Drive Verbosity
+
+Several papers identify training mechanisms that produce verbose behavior:
+
+- **RLHF bias toward verbosity**: The Token-Budget-Aware (TALE) paper (Han et al., 2024; arXiv:2412.18547) explicitly notes that RLHF training biases models toward longer outputs because human evaluators tend to prefer longer responses during reward model training, creating a systematic incentive for verbosity.
+- **Fine-tuning cannot easily override verbosity**: Poddar et al. (2025) found that LoRA fine-tuning on target-length answers actually *increased* response length by 24-26%, suggesting that pre-training patterns for verbosity are deeply ingrained and resist small-scale adaptation.
+- **Newer models are more verbose**: The Brevity paper found that newer models (Llama-3.1, GPT-4o) generate longer responses than their predecessors, suggesting that recent training strategies amplify verbosity.
+
+### 1.3 The Simplicity Bias
+
+**When More is Less** established a key finding: more capable models achieve peak performance with *shorter* reasoning chains. For Qwen2.5 on MATH Level 5, the optimal CoT length dropped from 14 steps (1.5B model) to 4 steps (72B model). This &#34;simplicity bias&#34; means that improving model capability should be paired with mechanisms that encourage more concise reasoning, not more tokens.
+
+---
+
+## 2. Self-Critique and Iterative Refinement
+
+### 2.1 Self-Refine: The Positive Case
+
+**Self-Refine** (Madaan et al., 2023) is the foundational framework for iterative self-improvement. The approach uses a single LLM as generator, feedback provider, and refiner through three phases:
+
+1. **Generate**: Produce initial output y₀
+2. **Feedback**: Generate structured, multi-aspect, actionable feedback on y₀
+3. **Refine**: Generate improved output y₁ using the feedback; iterate
+
+Key results across 7 tasks (sentiment reversal, dialogue, code optimization, code readability, math reasoning, acronym generation, constrained generation):
+- GPT-4 + Self-Refine showed the largest gains: +49.2% on dialogue, +32.4% on sentiment reversal, +30.0% on constrained generation
+- Self-Refine consistently outperformed sampling k=4 independent outputs, proving that iterative feedback-guided refinement is more effective than generating more candidates
+- **Critical ablation**: Specific feedback (e.g., &#34;avoid repeated calculations in the for loop&#34;) dramatically outperformed generic feedback (&#34;improve the efficiency&#34;), which outperformed no feedback at all
+- Most gains came from the first iteration; improvements diminished but continued through 3-4 iterations
+
+**Limitations**: Self-Refine showed near-zero improvement on math reasoning (ChatGPT gave &#34;everything looks good&#34; feedback 94% of the time). Weaker models (Vicuna-13B) failed to generate structured feedback consistently.
+
+**Code and data**: https://selfrefine.info/, https://github.com/madaan/self-refine
+
+### 2.2 Cannot Self-Correct: The Negative Case
+
+**Large Language Models Cannot Self-Correct Reasoning Yet** (Huang et al., 2024; arXiv:2310.01798) directly challenged the premise of self-correction:
+
+- **Central finding**: LLMs cannot self-correct reasoning without external feedback. &#34;Intrinsic self-correction&#34; (prompting the same model to review its own answer) consistently **degrades** performance.
+- On GSM8K with GPT-3.5-Turbo, self-correction changed 12.3% of correct answers to incorrect but only changed 1.7% of incorrect answers to correct (net negative).
+- Multi-agent debate did not outperform self-consistency (majority voting over multiple samples).
+- **External feedback is necessary**: When oracle feedback (indicating an answer is wrong) was provided, self-correction became effective. The problem is not the correction mechanism but the error detection mechanism.
+
+**Datasets**: GSM8K, CommonSenseQA, HotpotQA, CommonGen-Hard
+
+### 2.3 When Can LLMs Actually Correct Their Own Mistakes?
+
+**A Critical Survey of Self-Correction of LLMs** (Kamoi et al., 2024; arXiv:2406.01297) provided the most comprehensive analysis, organizing self-correction along three dimensions (feedback source, architecture, experimental fairness):
+
+**When self-correction works:**
+- Tasks with **decomposable responses** where sub-answers can be verified independently (e.g., checking if a named politician was actually born in NY)
+- **Reliable external feedback** from code interpreters, search engines, proof assistants
+- **Large-scale fine-tuning** (100K+ instances) for feedback generation
+- Reinforcement learning approaches (e.g., OpenAI o1)
+
+**When self-correction fails:**
+- **Intrinsic self-correction on general tasks**: No prior work demonstrates success under fair experimental conditions
+- Specific failures: arithmetic reasoning (GSM8K), closed-book QA (CSQA, HotpotQA), code generation, plan generation, graph coloring, logical reasoning
+
+**Critical methodological finding**: Many &#34;positive&#34; results for self-correction used unfair experimental setups:
+- Self-Refine used prompts that *intentionally sabotage* initial responses (dialogue prompt instructed &#34;The response is not interesting&#34; and &#34;The response is not very engaging&#34;)
+- RCI Prompting used ground-truth answers as stopping conditions
+- Reflexion used exact-match with ground truth as feedback
+
+**Key insight**: &#34;LLMs cannot find reasoning errors, but can correct them given the error location&#34; -- the bottleneck is error *detection*, not error *correction*.
+
+### 2.4 Pride and Prejudice: Self-Bias in Refinement
+
+**Pride and Prejudice: LLM Amplifies Self-Bias in Self-Refinement** (Xu et al., 2024; arXiv:2402.11436) revealed a fundamental obstacle to self-improvement:
+
+- LLMs systematically overestimate the quality of their own output (&#34;self-bias&#34;)
+- This bias **amplifies** during iterative self-refinement, creating a positive feedback loop
+- Self-refinement improves surface fluency but does NOT improve task-level quality
+- External feedback with accurate quality assessment dramatically reduces bias
+
+**Datasets**: Flores-200 (translation), CommonGen Hard, MATH
+
+---
+
+## 3. Controlling Response Budget and Length
+
+### 3.1 Token-Budget-Aware LLM Reasoning (TALE)
+
+**TALE** (Han et al., 2024; arXiv:2412.18547) introduced a framework for compressing CoT reasoning via explicit token budgets:
+
+- **TALE-EP** (Estimating-Prompting): Training-free approach that estimates task difficulty and sets an appropriate token budget
+- **TALE-PT** (Post-Training): Fine-tunes models to generate efficient reasoning within budget constraints
+- **Key finding**: On GSM8K, TALE-EP actually *outperformed* vanilla CoT while using fewer tokens, demonstrating that budget control can improve both efficiency and accuracy
+- RLHF-trained models systematically produce longer outputs than necessary; explicit budget control counteracts this tendency
+
+**Code**: https://github.com/GeniusHTX/TALE
+**Datasets**: GSM8K, GSM8K-Zero, MathBench
+
+### 3.2 Concise Chain-of-Thought (CCoT)
+
+**CCoT** (Nayab et al., 2024; arXiv:2407.19825) demonstrated that constraining output length does NOT hurt accuracy -- and often improves it:
+
+- Simple prompting strategy: append &#34;and limit the answer length to [N] words&#34; to the prompt
+- Achieved 12-25% reduction in redundancy with maintained or improved accuracy
+- Verbosity is not a proxy for reasoning quality; shorter, more focused responses often capture the essential reasoning without filler
+
+**Datasets**: GSM8K, SVAMP, ASDIV
+
+### 3.3 The Optimal Length Exists and Is Computable
+
+**When More is Less** (Wu et al., 2025) provided the theoretical foundation:
+
+- Derived a closed-form expression for optimal CoT length: N*(M,T) = TZ / M(Z+1), where Z involves the Lambert W function, M is model capability, and T is task difficulty
+- Optimal length increases with task difficulty but decreases with model capability
+- **Practical implication**: Length-Filtered Vote (grouping CoT solutions by length, computing entropy, voting over lowest-entropy groups) consistently outperformed vanilla majority voting on GPQA
+- Training with optimal-length CoT data: a smaller model (6-layer GPT-2) trained on optimal-length data outperformed a larger model (9-layer GPT-2) trained on mixed-length data
+
+---
+
+## 4. External Feedback and Verification
+
+### 4.1 The Case for External Feedback
+
+The literature converges on a clear conclusion: **external feedback is necessary for reliable self-correction**. The error detection bottleneck cannot be overcome by prompting alone for general tasks.
+
+Effective external feedback sources identified across papers:
+- **Code interpreters/compilers**: Deterministic pass/fail signals (Self-Debug, CRITIC, Reflexion for code)
+- **Search engines**: Factual verification via retrieved documents
+- **Proof assistants**: Formal correctness verification
+- **Programmatic constraint checking**: For constrained generation tasks
+- **Human feedback**: Gold standard but expensive
+- **Stronger model feedback**: &#34;Mixed-refine&#34; approach (Vicuna-13B initial + ChatGPT feedback = 24.18% → 40.5% on math)
+
+### 4.2 Reflexion: Verbal Reinforcement Learning
+
+**Reflexion** (Shinn et al., 2023; arXiv:2303.11366) introduced verbal self-reflection stored in episodic memory:
+- The agent generates actions, receives environment feedback, produces verbal reflections, and uses those reflections in subsequent attempts
+- Effective for sequential decision-making, code generation, and reasoning tasks
+- **Important caveat** (per Kamoi et al.): Uses exact-match with ground truth as feedback in some experiments, making the experimental setup &#34;unfair&#34; for evaluating intrinsic self-correction
+
+### 4.3 Structured Critique Frameworks
+
+Several papers explore structured approaches to critique:
+- **TICK: Checklists** (arXiv:2407.12753): Using structured checklists for systematic evaluation
+- **Critic CoT** (arXiv:2408.16326): Chain-of-thought critique reasoning
+- **Self-Contrast** (arXiv:2401.02009): Generating multiple diverse perspectives to create more reliable self-evaluation
+- **Deep Critic** (arXiv:2505.15475): Training dedicated critique models
+- **Critique with GRPO** (arXiv:2505.15875): Using group relative policy optimization for critique training
+
+---
+
+## 5. Synthesis: What Works for Fixing Lazy LLMs?
+
+### 5.1 What Doesn&#39;t Work
+
+1. **Simple self-critique prompting** (&#34;review your answer and fix any errors&#34;): Fails consistently on reasoning tasks under fair conditions. LLMs cannot reliably detect their own errors.
+
+2. **Vague instructions to be more critical**: Generic feedback performs far worse than specific, actionable feedback (Self-Refine ablation).
+
+3. **Assuming more tokens = more quality**: Both theoretical (When More is Less) and empirical (CCoT, Brevity) evidence shows that verbosity degrades quality past an optimal point.
+
+4. **Fine-tuning for brevity**: Small-scale fine-tuning cannot override deep-seated verbosity patterns from pre-training (Brevity paper).
+
+5. **Iterative self-refinement without external signals**: Self-bias amplifies over iterations, improving fluency while degrading task quality (Pride and Prejudice).
+
+### 5.2 What Works
+
+1. **Structured, specific feedback with external verification**: When feedback is actionable, specific, and grounded in external evidence (code execution, search results, constraint checking), self-correction is highly effective.
+
+2. **Token budget control**: Explicitly setting response budgets (TALE, CCoT) can improve both efficiency and accuracy. The key insight is that forcing conciseness eliminates redundant tokens while preserving essential reasoning.
+
+3. **Optimal-length calibration**: Training or prompting for task-appropriate reasoning length (not too short, not too long) outperforms both lazy and verbose strategies (When More is Less).
+
+4. **Multi-aspect, specific critique prompts**: Self-Refine&#39;s success depended on feedback that was (a) actionable, (b) specific to exact locations/elements, and (c) multi-dimensional. This is much more effective than &#34;be more critical.&#34;
+
+5. **Decomposition for verification**: Breaking outputs into independently verifiable sub-components makes self-correction effective even without external tools (CoVe, FActScore approach).
+
+6. **RL-based calibration**: Reinforcement learning naturally drives models toward optimal reasoning lengths and can recalibrate verbosity even from suboptimal starting points.
+
+7. **Cross-model critique**: Using a different (potentially smaller, specialized) model for critique avoids the self-bias problem while maintaining the benefit of model-based feedback.
+
+### 5.3 The Reconciliation
+
+The apparent contradiction between Self-Refine (self-critique works) and Huang et al. (self-critique doesn&#39;t work) resolves when we consider task type and feedback structure:
+
+- **Self-Refine works** on tasks where quality is multi-dimensional and the model can identify specific aspects to improve (dialogue, code readability, constrained generation). These are tasks where the model has latent knowledge about quality that isn&#39;t expressed in single-pass generation.
+
+- **Self-correction fails** on tasks where error detection requires capabilities the model lacks (mathematical reasoning, factual verification). The model cannot identify what it doesn&#39;t know.
+
+- **The critical variable is feedback quality**, not the act of self-reflection itself. External verification, structured evaluation criteria, and decomposition all improve feedback quality, which is the bottleneck.
+
+---
+
+## 6. Gaps and Opportunities
+
+### 6.1 Under-Explored Areas
+
+1. **Calibrated harshness in critique**: No paper systematically studies how the &#34;harshness&#34; or stringency of self-critique prompts affects output quality. The Self-Refine ablation (specific vs. generic feedback) is the closest, but direct manipulation of critique severity is unexplored.
+
+2. **Task-adaptive budget control**: While TALE and CCoT demonstrate fixed budget benefits, dynamic per-instance budget allocation based on estimated difficulty is underexplored.
+
+3. **The interaction between critique strength and self-bias**: If harsher critique prompts trigger stronger self-bias (defensive responses), there may be a non-monotonic relationship between critique intensity and improvement.
+
+4. **Small training data regimes for critique models**: Most fine-tuning approaches require 100K+ instances. Few-shot or low-resource critique training is underexplored.
+
+5. **Combining budget control with structured critique**: No paper integrates token budget constraints with iterative self-refinement.
+
+### 6.2 Experimental Design Recommendations
+
+Based on the methodological critiques in Kamoi et al. (2024):
+
+1. **Always use strong initial prompts** -- never compare self-correction against deliberately weakened baselines
+2. **Compare against self-consistency** (majority voting) at equivalent compute cost
+3. **Report feedback quality metrics** (error detection accuracy), not just downstream task performance
+4. **Use fair experimental frameworks**: same model, same information for both initial and corrected responses
+5. **Test on multiple task types**: reasoning, generation, constrained, open-ended
+
+---
+
+## 7. Key Datasets Across Papers
+
+| Dataset | Papers Using It | Task Type |
+|---------|----------------|-----------|
+| GSM8K | Self-Refine, Cannot Self-Correct, TALE, CCoT, When Can Correct, When More is Less | Math reasoning |
+| MATH | Pride &amp; Prejudice, When More is Less | Competition math |
+| SVAMP | CCoT | Math word problems |
+| ASDIV | CCoT | Math word problems |
+| CommonSenseQA | Cannot Self-Correct, When Can Correct | Commonsense QA |
+| HotpotQA | Cannot Self-Correct, When Can Correct | Multi-hop QA |
+| CommonGen-Hard | Self-Refine, Cannot Self-Correct, Pride &amp; Prejudice | Constrained generation |
+| Flores-200 | Pride &amp; Prejudice | Machine translation |
+| GPQA | When More is Less | Graduate-level QA |
+| MMLU STEM | When More is Less | Multi-task science |
+| FED | Self-Refine | Dialogue evaluation |
+| PIE | Self-Refine | Code optimization |
+
+---
+
+## 8. Key Code Repositories
+
+| Repository | Paper | URL |
+|-----------|-------|-----|
+| self-refine | Self-Refine (Madaan et al., 2023) | https://github.com/madaan/self-refine |
+| TALE | Token-Budget-Aware (Han et al., 2024) | https://github.com/GeniusHTX/TALE |
+| reflexion | Reflexion (Shinn et al., 2023) | https://github.com/noahshinn/reflexion |
+
+---
+
+## 9. Paper Catalog
+
+### Tier 1: Deeply Read (Full Structured Notes Available)
+
+1. **Self-Refine** (Madaan et al., 2023) -- arXiv:2303.17651 -- Iterative refinement with self-feedback
+2. **Cannot Self-Correct** (Huang et al., 2024) -- arXiv:2310.01798 -- LLMs cannot self-correct reasoning without external feedback
+3. **When Can LLMs Correct** (Kamoi et al., 2024) -- arXiv:2406.01297 -- Critical survey of self-correction
+4. **Pride and Prejudice** (Xu et al., 2024) -- arXiv:2402.11436 -- Self-bias amplification in self-refinement
+5. **Token-Budget-Aware** (Han et al., 2024) -- arXiv:2412.18547 -- TALE framework for budget-controlled reasoning
+6. **Concise Thoughts** (Nayab et al., 2024) -- arXiv:2407.19825 -- CCoT: constraining output length improves quality
+7. **When More is Less** (Wu et al., 2025) -- arXiv:2502.07266 -- Inverted U-curve for CoT length vs. accuracy
+8. **Brevity is the Soul of Sustainability** (Poddar et al., 2025) -- arXiv:2506.08686 -- LLM response length characterization and prompt-based reduction
+
+### Tier 2: Downloaded, Titles and Abstracts Reviewed
+
+9. **Self-Critiquing Models** -- arXiv:2206.05802
+10. **Reflexion** (Shinn et al., 2023) -- arXiv:2303.11366
+11. **Tree of Thoughts** -- arXiv:2305.10601
+12. **Self-Eval Beam Search** -- arXiv:2305.00633
+13. **GPT-4 Doesn&#39;t Know It&#39;s Wrong** -- arXiv:2310.12397
+14. **Can LLMs Self-Critique** -- arXiv:2310.08118
+15. **Self-Contrast** -- arXiv:2401.02009
+16. **Prompt Chaining Stepwise** -- arXiv:2406.00507
+17. **TICK Checklists** -- arXiv:2407.12753
+18. **Internal Consistency** -- arXiv:2407.14507
+19. **Critic CoT** -- arXiv:2408.16326
+20. **MagiCore** -- arXiv:2409.12147
+21. **Score Self-Correct RL** -- arXiv:2409.12917
+22. **DeCRIM** -- arXiv:2410.06381
+23. **S1 Simple Test-Time** -- arXiv:2501.19393
+24. **L1 Controlling Length** -- arXiv:2503.04697
+25. **Stop Overthinking** -- arXiv:2503.16419
+26. **Deep Critic** -- arXiv:2505.15475
+27. **Critique with GRPO** -- arXiv:2505.15875
+
+---
+
+## 10. Implications for Experimental Design
+
+Based on this review, a research program on &#34;fixing lazy LLMs&#34; should:
+
+1. **Test the &#34;harsher critic&#34; hypothesis carefully**: Vary critique stringency systematically while controlling for the Self-Refine finding that *specificity* matters more than *severity*.
+
+2. **Combine budget control with critique**: Test whether setting explicit token budgets during self-refinement iterations produces better results than either approach alone.
+
+3. **Use fair baselines**: Always compare against (a) direct prompting with strong prompts, (b) self-consistency at equivalent compute, (c) generate-and-rank approaches.
+
+4. **Measure feedback quality directly**: Report error detection accuracy and feedback actionability, not just downstream task metrics.
+
+5. **Test across the laziness spectrum**: Include tasks where models are too brief (lazy) and tasks where models are too verbose (overthinking) to understand whether the same interventions work for both.
+
+6. **Consider the inverted-U**: Any intervention that increases output length must account for the theoretical result that there is an optimal length beyond which quality degrades.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          PAPER REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+Generate a complete academic paper with the following structure:
+
+1. TITLE
+   - Clear, specific, informative
+   - Should convey main finding or contribution
+
+2. ABSTRACT (150-250 words)
+   - Problem statement
+   - Approach
+   - Key results
+   - Significance
+
+3. INTRODUCTION
+   - Research problem and motivation
+   - Gap in existing work
+   - Our contribution (be specific)
+   - Paper organization
+
+4. RELATED WORK
+   - Organized by theme/approach
+   - Position our work relative to prior work
+   - Cite papers from literature review
+
+5. METHODOLOGY
+   - Clear description of approach
+   - Experimental setup
+   - Datasets used
+   - Evaluation metrics
+   - Baselines
+
+6. RESULTS
+   - Present results with tables and figures
+   - Statistical analysis
+   - Comparison to baselines
+   - Ablation studies (if applicable)
+
+7. DISCUSSION
+   - Interpretation of results
+   - Limitations
+   - Broader implications
+
+8. CONCLUSION
+   - Summary of contributions
+   - Key findings
+   - Future work
+
+9. REFERENCES
+   - BibTeX format
+   - All cited papers
+
+════════════════════════════════════════════════════════════════════════════════
+                          OUTPUT FORMAT
+════════════════════════════════════════════════════════════════════════════════
+
+Create a MODULAR LaTeX project with the following directory structure:
+
+paper_draft/
+├── main.tex              # Main file that imports all sections
+├── references.bib        # BibTeX references
+├── sections/
+│   ├── abstract.tex      # Abstract content
+│   ├── introduction.tex  # Introduction section
+│   ├── related_work.tex  # Related work section
+│   ├── methodology.tex   # Methodology section
+│   ├── results.tex       # Results section
+│   ├── discussion.tex    # Discussion section
+│   └── conclusion.tex    # Conclusion section
+├── figures/              # Directory for any generated figures
+├── tables/               # Directory for complex standalone tables
+└── appendix/             # Directory for appendix sections (if needed)
+
+INSTRUCTIONS:
+1. First, create the directory structure above (mkdir -p paper_draft/sections paper_draft/figures paper_draft/tables paper_draft/appendix)
+2. Write main.tex using the EXACT preamble for NEURIPS:
+
+   \documentclass{article}
+   \usepackage[final]{neurips_2025}  % NEURIPS style (neurips_2025.sty is in paper_draft/)
+   \usepackage[hidelinks]{hyperref}  % REQUIRED: clickable links
+   \usepackage{booktabs}  % REQUIRED: professional tables
+   \usepackage{graphicx}
+   \usepackage{amsmath,amssymb}
+
+   % Import command files
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+   % Use this bibliography style:
+   \bibliographystyle{plainnat}
+
+   - Use \input{sections/...} to include each section
+   - Use \bibliography{references} for references
+3. Write each section file with COMPLETE content (no placeholders)
+4. Each section file should include its \section{} command
+5. Write references.bib with all citations in BibTeX format
+6. After writing all files, compile the paper:
+   cd paper_draft && pdflatex -interaction=nonstopmode main.tex && bibtex main && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
+
+This modular structure allows humans to easily:
+- Edit individual sections without navigating a large file
+- Track changes per section
+- Reuse sections across different paper versions
+
+════════════════════════════════════════════════════════════════════════════════
+                          QUALITY REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+- Academic tone throughout
+- All claims must be supported by data from the experiment report
+- Proper citations using \cite{} commands
+- Clear figures and tables with proper captions
+- NO placeholder text - every section must have real content
+- The paper MUST compile without errors
+- If compilation fails, debug and fix the LaTeX errors
+
+════════════════════════════════════════════════════════════════════════════════
+                          LAB WRITING STYLE
+════════════════════════════════════════════════════════════════════════════════
+
+Follow these lab-specific conventions to match our paper style:
+
+1. LANGUAGE STYLE:
+   - Use active voice: "We propose", "We examine", "We focus on"
+   - Be direct and confident: "Our main question is...", "We hypothesize that..."
+   - State things clearly and simply - prefer plain language over jargon
+   - Use bold questions as paragraph organizers: {\bf what is X?}
+   - Include specific quantitative claims: "8.97% over baseline"
+   - Avoid fancy wording: "utilize" → "use", "facilitate" → "help"
+
+2. INTRODUCTION STRUCTURE:
+   - Engaging hook (get to the point quickly)
+   - Problem importance
+   - Gap identification
+   - Your approach with method figure reference
+   - Quantitative preview of results
+   - Contribution bullets (3-4 items, action verbs)
+
+3. CONTRIBUTION LISTS:
+   \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+       \item We propose...
+       \item We conduct...
+       \item We complement...
+   \end{itemize}
+
+4. MODULAR COMMANDS STRUCTURE:
+   Create paper_draft/commands/ directory with:
+   - math.tex: Math notation macros (copy from templates/paper_writing/commands/)
+   - general.tex: Formatting macros (copy from templates/paper_writing/commands/)
+   - macros.tex: Project-specific term definitions
+
+   In main.tex, include:
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+5. REFERENCE CONVENTIONS:
+   Use reference macros from math.tex:
+   - \figref{fig:name} for "figure 1" (lowercase, in-sentence)
+   - \Figref{fig:name} for "Figure 1" (capitalized, start of sentence)
+   - \secref{sec:name} for "section 2"
+
+6. TEXT FORMATTING:
+   - Use \para{Header text} for bold paragraph headers
+   - Define method/dataset names with \textsc and \xspace:
+     \newcommand{\methodname}{\textsc{MethodName}\xspace}
+
+7. TABLE FORMATTING:
+   - Use booktabs package (no vertical lines)
+   - Use \resizebox{\textwidth}{!}{...} for wide tables
+   - Use @{} to remove padding at table edges
+   - Use \cmidrule(lr){x-y} for sub-headers
+   - Use \textsc{} for dataset/method names in headers
+   - Bold best results with {\bf ...}
+
+8. FIGURE FORMATTING:
+   - Use 0.32\textwidth for 3-column subfigures
+   - Use 0.95\linewidth for full-width figures
+   - Use \input{figures/legend} for shared legends
+   - Write self-contained captions explaining key observations
+
+9. RESULTS PRESENTATION:
+   - Define \increase and \decrease for colored arrows (green up, red down)
+   - Bold best results in tables
+   - Report confidence intervals when available
+
+10. ALGORITHM STYLING:
+    - Use algpseudocode with [noend]
+    - Use \triangleright for comments
+
+11. HYPERLINKS (REQUIRED):
+    - Always use \usepackage[hidelinks]{hyperref} or with colored links
+    - All citations, section refs, figure refs, table refs must be clickable
+    - This is essential for reader navigation
+
+════════════════════════════════════════════════════════════════════════════════
+                          WORKFLOW: REVIEW AND REFLECT
+════════════════════════════════════════════════════════════════════════════════
+
+Before calling finish, you MUST complete these review steps:
+
+1. REVIEW RESOURCES (at the start):
+   - Read templates/skills/paper-writer/SKILL.md for detailed guidance
+   - Study templates/paper_writing/lab_style_guide.md for style conventions
+   - Browse paper_examples/ for formatting and language patterns
+
+2. SELF-REFLECTION (before finishing):
+   After writing all sections, review your work against these criteria:
+
+   LANGUAGE CHECK:
+   - [ ] Is the writing clear and jargon-free?
+   - [ ] Are claims specific with quantitative support?
+   - [ ] Is active voice used throughout?
+
+   FORMATTING CHECK:
+   - [ ] Does main.tex include \input{commands/math}, \input{commands/general}, \input{commands/macros}?
+   - [ ] Is hyperref package included for clickable references?
+   - [ ] Do tables use booktabs (no vertical lines)?
+   - [ ] Are best results bolded in tables?
+   - [ ] Are figures/tables properly captioned?
+
+   STRUCTURE CHECK:
+   - [ ] Does introduction follow: hook → importance → gap → approach → preview → contributions?
+   - [ ] Are contribution bullets specific with action verbs?
+   - [ ] Does the paper compile without errors?
+
+3. FIX ISSUES:
+   - Address any issues found in the self-reflection
+   - Re-compile and verify the PDF looks correct
+
+Only after completing this review should you consider the paper finished.

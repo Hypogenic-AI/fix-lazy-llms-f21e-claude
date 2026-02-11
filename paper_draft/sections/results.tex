@@ -1,0 +1,134 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Experiment 1: Harsher Critique Monotonically Degrades Accuracy}
+
+\Tabref{tab:critique_results} presents accuracy across five critique stringency levels.
+The baseline (L0, no critique) achieves 96.0\% accuracy.
+Each increase in critique stringency reduces accuracy, with the decline reaching statistical significance at L3 (harsh, $p = 0.009$, Cohen's $h = -0.207$) and L4 (adversarial, $p = 0.027$, Cohen's $h = -0.189$).
+The relationship is monotonically negative---there is no inverted U-curve, \textbf{rejecting H1}.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Level} & \textbf{Acc.\ (\%)} & \textbf{95\% CI} & \textbf{Changed} & \textbf{C$\to$W} & \textbf{Tokens} \\
+\midrule
+L0 (Baseline) & {\bf 96.0} & [92.3, 98.0] & 0.0\% & 0.0\% & 305 \\
+L1 (Gentle) & 94.5 & [90.4, 96.9] & 2.5\% & 2.1\% & 776 \\
+L2 (Moderate) & 93.5 & [89.2, 96.2] & 4.5\% & 3.6\% & 885 \\
+L3 (Harsh) & 91.0 & [86.2, 94.2] & 6.5\% & 5.7\% & 1,218 \\
+L4 (Adversarial) & 91.5 & [86.8, 94.6] & 6.5\% & 5.7\% & 1,232 \\
+\bottomrule
+\end{tabular}
+\caption{Experiment~1: Critique stringency results ($n=200$). \textbf{Acc.}\ = accuracy. \textbf{Changed} = percentage of answers modified after critique. \textbf{C$\to$W} = percentage of originally correct answers changed to incorrect. \textbf{Tokens} = average tokens per problem. The L0 vs.\ L3 comparison is significant at $p = 0.009$ (McNemar's test).}
+\label{tab:critique_results}
+\end{table}
+
+The mechanism is clear from the transition rates.
+At L3 and L4, the model changes 6.5\% of its answers after self-critique.
+Of originally correct answers, 5.7\% are changed to incorrect (Correct$\to$Wrong), while only 12.5--25\% of originally incorrect answers are salvaged (Wrong$\to$Correct).
+Since the baseline is at 96\% accuracy, there are far more correct answers to damage than incorrect answers to fix.
+Self-critique costs 2.5--4$\times$ more tokens than the baseline while degrading accuracy.
+
+\subsection{Experiment 2: Budget Constraints Maintain Accuracy at Lower Cost}
+
+\Tabref{tab:budget_results} presents results for four budget levels.
+Budget constraints do not hurt accuracy at any level tested.
+The tightest constraint (75 words) achieves the highest accuracy (96.7\%) while using 32\% fewer tokens than the unconstrained condition.
+While no individual comparison reaches statistical significance (the sample size of 150 limits power for small effects), the trend is consistent: \textbf{H2 is partially supported}.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Budget} & \textbf{Acc.\ (\%)} & \textbf{95\% CI} & \textbf{Avg.\ Words} & \textbf{Avg.\ Tokens} \\
+\midrule
+No limit & 95.3 & [90.7, 97.7] & 123 & 290 \\
+300 words & 96.0 & [91.5, 98.2] & 134 & 318 \\
+150 words & {\bf 96.7} & [92.4, 98.6] & 87 & 253 \\
+75 words & {\bf 96.7} & [92.4, 98.6] & 45 & 198 \\
+\bottomrule
+\end{tabular}
+\caption{Experiment~2: Budget control results ($n=150$). Tighter budgets maintain or slightly improve accuracy while reducing token usage. The 75-word condition uses 32\% fewer tokens than the unconstrained condition.}
+\label{tab:budget_results}
+\end{table}
+
+\subsection{Experiment 3: Budget Constraints Partially Mitigate Critique Damage}
+
+\Tabref{tab:factorial_results} presents the $3 \times 3$ factorial results.
+Two main effects emerge:
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+& \textbf{No Limit} & \textbf{150 words} & \textbf{75 words} \\
+\midrule
+\textbf{No Critique} & 95.3\% & {\bf 96.7\%} & {\bf 96.7\%} \\
+\textbf{Moderate Critique} & 92.7\% & 94.7\% & 94.7\% \\
+\textbf{Harsh Critique} & 88.0\% & 91.3\% & 92.0\% \\
+\bottomrule
+\end{tabular}
+\caption{Experiment~3: Critique $\times$ budget factorial ($n=150$). Accuracy (\%) across nine conditions. Budget constraints partially rescue accuracy under harsh critique (88.0\% $\to$ 92.0\%), but even with tight budgets, critique still degrades performance relative to no critique at the same budget level.}
+\label{tab:factorial_results}
+\end{table}
+
+\para{Critique effect (negative).}
+Within each budget level, adding critique reduces accuracy.
+The worst condition (harsh critique, no limit: 88.0\%) is 8.7 percentage points below the best (no critique, tight budget: 96.7\%).
+
+\para{Budget effect (positive).}
+Within each critique level, tighter budgets improve accuracy.
+This is most pronounced for harsh critique, where the 75-word budget (92.0\%) partially recovers the loss from unconstrained harsh critique (88.0\%).
+Budget constraints appear to limit the model's ability to ``overthink'' during self-evaluation: when forced to be concise in its critique, the model is less likely to fabricate errors in correct solutions.
+\textbf{H3 is partially supported}, though in the unexpected direction that budget helps primarily by mitigating critique damage rather than by synergistically combining with critique.
+
+\Tabref{tab:factorial_tokens} shows that budget constraints also reduce the token overhead of critique.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+& \textbf{No Limit} & \textbf{150 words} & \textbf{75 words} \\
+\midrule
+\textbf{No Critique} & 290 & 252 & 202 \\
+\textbf{Moderate Critique} & 850 & 770 & 731 \\
+\textbf{Harsh Critique} & 1,092 & 813 & 759 \\
+\bottomrule
+\end{tabular}
+\caption{Average tokens per problem across factorial conditions. Budget constraints substantially reduce the token overhead of self-critique.}
+\label{tab:factorial_tokens}
+\end{table}
+
+\subsection{Experiment 4: No Alternative Strategy Outperforms Baseline}
+
+\Tabref{tab:alternative_results} presents results for five effort-inducing strategies.
+No strategy achieves even marginally significant improvement over the baseline.
+\textbf{H4 is rejected.}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Strategy} & \textbf{Acc.\ (\%)} & \textbf{95\% CI} & \textbf{Tokens} & \textbf{Cost} \\
+\midrule
+Baseline \ChainOfThought & {\bf 95.3} & [90.7, 97.7] & 290 & 1.0$\times$ \\
+High Stakes & 95.3 & [90.7, 97.7] & 351 & 1.2$\times$ \\
+Explicit Rubric & 94.7 & [89.8, 97.3] & 950 & 3.3$\times$ \\
+Step Verification & 95.3 & [90.7, 97.7] & 815 & 2.8$\times$ \\
+Self-Consistency ($k$=5) & 95.3 & [90.7, 97.7] & 1,454 & 5.0$\times$ \\
+\bottomrule
+\end{tabular}
+\caption{Experiment~4: Alternative strategies ($n=150$). No strategy improves over baseline \chainofthought prompting. \textbf{Cost} = token multiplier relative to baseline. All McNemar $p$-values $\geq 0.480$.}
+\label{tab:alternative_results}
+\end{table}
+
+High-stakes emotional framing has zero measurable effect on mathematical reasoning---the model produces identical results with slightly more verbose phrasing.
+Self-consistency voting over five samples uses 5$\times$ the compute for no accuracy gain; at 95.3\% per-sample accuracy, the expected disagreement rate is too low to benefit from consensus.
+The explicit rubric strategy shows a slight (non-significant) accuracy \emph{decrease} to 94.7\%, consistent with our finding that critique-like interventions tend to harm performance.

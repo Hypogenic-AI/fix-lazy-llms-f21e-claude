@@ -1,0 +1,33 @@
+\section{Related Work}
+\label{sec:related}
+
+We organize related work into three themes: self-correction and self-critique in LLMs, response length and budget control, and alternative strategies for improving LLM output quality.
+
+\para{Self-correction in LLMs.}
+\selfrefine \citep{madaan2023selfrefine} introduced iterative self-refinement, where a single LLM generates, critiques, and revises its own output.
+Across seven tasks, \selfrefine improved outputs by approximately 20\% on average, with the largest gains on subjective tasks such as dialogue response generation (+49.2\%) and sentiment reversal (+32.4\%).
+A critical ablation showed that specific feedback dramatically outperformed generic feedback.
+However, \selfrefine showed near-zero improvement on math reasoning, with the model producing ``everything looks good'' feedback 94\% of the time.
+
+\citet{huang2024large} directly challenged the premise of self-correction, showing that on \gsmk with GPT-3.5-Turbo, self-correction changed 12.3\% of correct answers to incorrect but only 1.7\% of incorrect answers to correct.
+\citet{kamoi2024when} provided the most comprehensive analysis, concluding that intrinsic self-correction on reasoning tasks has never been demonstrated to work under fair experimental conditions.
+They identified a key insight: LLMs cannot \emph{find} reasoning errors but \emph{can} correct them given the error location---the bottleneck is error detection, not correction.
+\citet{xu2024pride} revealed that LLMs systematically overestimate the quality of their own output (self-bias), and this bias amplifies during iterative self-refinement.
+
+Our work extends this literature by systematically varying critique \emph{stringency} rather than testing a binary on/off critique condition.
+We show that the degradation is not merely present but monotonically increases with harshness.
+
+\para{Response length and budget control.}
+Multiple lines of work demonstrate that LLM verbosity is a systematic problem and that constraining output length can improve both efficiency and accuracy.
+\tale \citep{han2024token} introduced token-budget-aware reasoning, showing that explicit budgets can improve accuracy on \gsmk while reducing token usage.
+\ccot \citep{nayab2024concise} demonstrated 12--25\% reduction in redundancy with maintained or improved accuracy through simple length-constraining prompts.
+\citet{wu2025when} provided theoretical evidence that accuracy follows an inverted U-curve with \chainofthought length, and that more capable models achieve peak performance with shorter reasoning chains.
+\citet{poddar2025brevity} benchmarked 12 LLMs and found responses are 3--20$\times$ longer than necessary, with simple brevity prompts achieving 25--60\% energy savings while improving quality.
+
+Our budget control experiments build on this work by testing the \emph{interaction} between budget constraints and self-critique---a combination not previously studied.
+
+\para{Alternative improvement strategies.}
+Self-consistency \citep{wang2023selfconsistency} uses majority voting over multiple samples, providing a compute-matched baseline for any refinement strategy.
+Reflexion \citep{shinn2023reflexion} uses verbal self-reflection stored in episodic memory, though \citet{kamoi2024when} noted that some experiments used exact-match ground truth as feedback.
+Tree of Thoughts \citep{yao2023tree} explores multiple reasoning paths through explicit search.
+These approaches all add computational cost; we compare several of them against simple \chainofthought under matched or unmatched compute budgets.

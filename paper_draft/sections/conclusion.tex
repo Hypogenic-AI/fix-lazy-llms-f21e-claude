@@ -1,0 +1,19 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We conducted the first systematic study of critique stringency in LLM self-evaluation, testing five levels from no critique to adversarial across 200 \gsmk problems.
+Our key findings are:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item \textbf{Harsher self-critique is counterproductive.} Accuracy drops monotonically from 96.0\% (no critique) to 91.0\% (harsh critique), with the decline significant at $p < 0.01$. The model is more likely to break correct answers than fix incorrect ones.
+
+\item \textbf{Budget constraints are the simplest effective intervention.} Asking the model to be concise (75 words) maintains 96.7\% accuracy while using 32\% fewer tokens.
+
+\item \textbf{Budget partially mitigates critique damage.} Tight budget constraints under harsh critique (92.0\%) partially recover the accuracy lost from unconstrained harsh critique (88.0\%).
+
+\item \textbf{No effort-inducing strategy beats the baseline.} High-stakes framing, explicit rubrics, step verification, and self-consistency all fail to improve upon simple chain-of-thought, while using 1.2--5$\times$ more tokens.
+\end{enumerate}
+
+The popular intuition that ``being harsh with LLMs'' improves results is wrong---at least for reasoning tasks.
+The ``lazy LLM'' problem is better addressed by constraining output (forcing conciseness) rather than by demanding self-evaluation (which introduces errors).
+For future work, we recommend investigating these findings on harder benchmarks where the baseline is further from ceiling, on weaker models where there is more room for improvement, and on subjective evaluation tasks where the dynamics of self-critique may differ.
